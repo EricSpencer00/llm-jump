@@ -1,0 +1,23 @@
+{
+ "config": {
+  "epochs": 3,
+  "lr": 1e-05,
+  "layers": 8,
+  "seeds": 3
+ },
+ "before": {
+  "jump_rate": 0.375,
+  "false_revision_rate": 0.5,
+  "auc": 0.3815104166666667,
+  "mean_p_law_fell": 0.4796620106790215,
+  "mean_p_law_kept": 0.49765787180513144
+ },
+ "after_out_of_fold": {
+  "jump_rate": 1.0,
+  "false_revision_rate": 1.0,
+  "auc": 0.7083333333333334,
+  "mean_p_law_fell": 0.6523233223706484,
+  "mean_p_law_kept": 0.6080467986563841
+ },
+ "in_sample_auc": 0.9696356275303644
+}
