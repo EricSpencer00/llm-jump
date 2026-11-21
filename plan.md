@@ -2,6 +2,18 @@
 
 **Problem.** LLMs treat theory as law. Stated formally: they assert `φ` when only `Γ ⊢ φ` is licensed, and they refuse to revise the famous members of `Γ`.
 
+## End goal
+
+A model that has read nothing after 1900 is shown a checked contradiction behind a 1900 to 1930 discovery it has never seen, and it names the assumption history later revised.
+
+Pass, all three on held-out discoveries:
+
+1. The historically correct exit appears in its answer at twice the base model's rate or better.
+2. The famous-versus-stripped gap is halved or better.
+3. No rise in false revision on controls where the law was right.
+
+Headline case: flight. `{Smeaton coefficient 0.005, lift equation, glider measurements} ⊢ ⊥`. The Wrights' jump was dropping a coefficient held as law since 1759.
+
 ## Foundation: every claim is a sequent
 
 `Γ ⊢ φ`: under assumption set `Γ`, statement `φ` follows.
@@ -71,13 +83,44 @@ Plugins behind one interface: sequent and certificate in, accept or reject out. 
 
 The paired difference is above zero on A or B. If it is zero, the problem as stated does not exist in current models and the project stops.
 
-## After the gate, one at a time
+## Experiment: the 1900 model
 
-1. Ledger as a tool: does access remove the three failures?
-2. Fine-tune on ledger sequents so the model emits `Γ` with every `φ`. Sophia.
-3. Steering: attenuate the direction that separates famous-name from stripped items.
-4. Symbolic regression: orbital data → checkable equation. Mercury as Test B on real history.
-5. Re-execution checker. Biology.
+Time is the train/test split. The model cannot have memorized what had not happened.
+
+**Models.**
+
+| Model | Size | Cutoff | Role |
+|---|---|---|---|
+| GPT-1900 (`mhla/gpt1900-d34-22btok`) | 3.29B | 1900 | Primary |
+| talkie-1930 (`talkie-lm/talkie-1930-13b-base`) | 13B | 1930 | Second cutoff, test set 1931 to 1960 |
+| talkie-web-13b | 13B | modern | Same architecture, modern data. Control |
+
+**Data.** Each item is a checked `Γ ⊢ ⊥` with every correction set known.
+
+- Train, pre-1900 only: phlogiston, caloric, spontaneous generation, miasma, plus synthetic contradictions.
+- Train controls where the law survived: Uranus's anomaly, fixed by Neptune and not by dropping Newton.
+- Test, 1900 to 1930, never trained on: flight, the photon, special relativity, Mercury, radioactive transmutation, continental drift.
+
+The mix of survived and revised laws stops the model learning "always drop the famous one".
+
+**Leak probe.** An item is used only if the base model fails to state its answer when asked directly.
+
+**Methods, cheapest first.**
+
+1. Ledger as a tool at inference. No training.
+2. Fine-tune on revision traces from the pre-1900 set.
+3. RL with the checker as the only reward: the answer's correction sets match the enumerated ones.
+4. Steering along the direction that separates famous from stripped items.
+
+Stop at the first method that passes the end goal.
+
+**Prior work.** GPT-1900's author already ran contradiction and discovery RL toward the photon and relativity. Reported result: failure on most tasks, with leakage suspected. Our difference: reward and score come from a checker, test items are leak-probed, and the target is the assumption to revise, not the finished theory.
+
+**Compute.** Sophia: fine-tuning and RL for both models. Polaris: evaluation sweeps. AWS: checker farm and item construction.
+
+## Later
+
+Symbolic regression to produce the replacement law. Re-execution checker for biology.
 
 ## What stays unverified
 
