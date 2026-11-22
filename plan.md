@@ -29,6 +29,18 @@
 
 **End goal.** A drugged arm beats sober on a milestone at equal budget, Fisher exact p < 0.05, and the result holds on a rerun with new seeds.
 
+## Next: a model of today
+
+Flight result: no drug helped, because GPT-1900 cannot design sober. The next test uses a model that can do the task.
+
+For today there is no answer key, so the checker replaces hindsight:
+
+1. Ask the model what is impossible or already optimal, in a domain with an exact checker.
+2. The same model, drugged, attacks those statements.
+3. A checker-accepted result that contradicts step 1 is a gap.
+
+Domain: combinatorial constructions. Model: the best open-weights model, since noise and steering need the weights.
+
 ## Unverified
 
 - Simulator constants are estimates from the Flyer's published figures.
