@@ -2,13 +2,13 @@
 #PBS -A EVITA
 #PBS -q single-gpu
 #PBS -l select=1:ngpus=1
-#PBS -l walltime=01:00:00
+#PBS -l walltime=04:00:00
 #PBS -l filesystems=home:grand
 #PBS -j oe
-# usage: qsub -v ARGS="cv --epochs 3;cv --epochs 6" run.pbs   (runs separated by ;)
+# usage: qsub run.pbs            (full run)
+#        qsub -v ARGS="--runs 2 --trials 3 --answers 25 --out results/probe.json" run.pbs
 set -e
 cd /grand/EVITA/eric-spencer/llm-jump
 module use /soft/modulefiles; module load conda; conda activate base
 export PYTHONPATH=pylib PYTHONUNBUFFERED=1
-IFS=';' read -ra RUNS <<< "$ARGS"
-for r in "${RUNS[@]}"; do python jump.py $r; done
+python drug.py $ARGS
