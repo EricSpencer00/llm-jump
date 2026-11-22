@@ -28,6 +28,15 @@ Model: GPT-1900 instruct (`mhla/gpt1900-instruct-v3-sft`, 3.29B). Fine-tune: top
 - The first question format (letter choice) measured nothing and was replaced using training items only. The test was scored once.
 - No Lean ledger or checker was built. This is the fine-tune arm alone.
 
+## Round two, fixed before any model ran
+
+Problem: round one learned which laws stand, not when evidence is decisive.
+
+- **Twins** ([data/twins.jsonl](data/twins.jsonl)): each of the 56 training laws gets a second, invented observation with the opposite verdict. A law that fell also appears under weak evidence and stands. A law that stood also appears under decisive evidence and falls. The law's name carries no signal. Classes: 56 to 56.
+- **New sealed test** ([data/test2.jsonl](data/test2.jsonl), sha256 `383062e0cca75765`): 24 revised and 24 kept, real history from 1900 to 2014, none in round one.
+- **Settings** are chosen on grouped 5-fold CV and the spent round-one test. The new test is scored once.
+- **Pass**: jump rate at least double the base model's, false revisions no higher than the base model's, AUC above chance at z > 2.
+
 ## Reproduce
 
 ```

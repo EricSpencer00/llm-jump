@@ -110,28 +110,46 @@ def main():
     ap.add_argument("--layers", type=int, default=4)
     ap.add_argument("--seeds", type=int, default=3)
     ap.add_argument("--out", default="results")
+    ap.add_argument("--train", nargs="+", default=["data/train.jsonl", "data/twins.jsonl"])
+    ap.add_argument("--test", default="data/test2.jsonl")
+    ap.add_argument("--dev", default="data/test.jsonl", help="spent round-one test, scored in cv mode")
     a = ap.parse_args()
     cfg = {k: getattr(a, k) for k in ("epochs", "lr", "layers", "seeds")}
     model, tok = load(a.model, a.code)
-    train = [json.loads(l) for l in open("data/train.jsonl")]
+    read = lambda f: [json.loads(l) for l in open(f)]
+    train = [it for f in a.train for it in read(f)]
+    law = {it["id"]: it["law"] for it in train if "law" in it}
+    for it in train:  # a twin (id ends in x) takes its base item's law
+        it.setdefault("law", law[it["id"][:3]])
+    tag = "+".join(f.split("/")[-1].split(".")[0] for f in a.train)
     init = top_state(model, a.layers)
 
     if a.mode == "cv":
-        before = [p_law(model, tok, it) for it in train]
+        bases = sorted({it["id"][:3] for it in train})
+        fold_of = lambda it: bases.index(it["id"][:3]) % 5  # a twin stays in its base item's fold
+        real = [i for i, it in enumerate(train) if len(it["id"]) == 3]
         after = [0.0] * len(train)
         for fold in range(5):
-            held = [i for i in range(len(train)) if i % 5 == fold]
             restore(model, a.layers, init)
-            finetune(model, tok, [it for i, it in enumerate(train) if i not in held], a.epochs, a.lr, a.layers, 0)
-            for i in held:
-                after[i] = p_law(model, tok, train[i])
-        fit = [p_law(model, tok, it) for i, it in enumerate(train) if i % 5 != 4]  # last fold's own training items
-        res = {"config": cfg, "before": summary(train, before), "after_out_of_fold": summary(train, after),
-               "in_sample_auc": auc(fit, [it["fell"] for i, it in enumerate(train) if i % 5 != 4])}
-        name = f"cv_e{a.epochs}_lr{a.lr}_L{a.layers}"
+            finetune(model, tok, [it for it in train if fold_of(it) != fold], a.epochs, a.lr, a.layers, 0)
+            for i, it in enumerate(train):
+                if fold_of(it) == fold:
+                    after[i] = p_law(model, tok, it)
+        restore(model, a.layers, init)
+        dev = read(a.dev)
+        dev_before = [p_law(model, tok, it) for it in dev]
+        finetune(model, tok, train, a.epochs, a.lr, a.layers, 0)
+        dev_after = [p_law(model, tok, it) for it in dev]
+        res = {"config": cfg, "train": a.train,
+               "out_of_fold_all": summary(train, after),
+               "out_of_fold_real": summary([train[i] for i in real], [after[i] for i in real]),
+               "dev_before": summary(dev, dev_before), "dev_after": summary(dev, dev_after),
+               "dev_items": {it["id"]: round(s, 3) for it, s in zip(dev, dev_after)}}
+        name = f"cv_{tag}_e{a.epochs}_lr{a.lr}_L{a.layers}"
     else:
-        test = [json.loads(l) for l in open("data/test.jsonl")]
-        score = lambda: ([p_law(model, tok, it) for it in test], [p_law(model, tok, it, "plain") for it in test])
+        test = read(a.test)
+        score = lambda: ([p_law(model, tok, it) for it in test],
+                         [p_law(model, tok, it, "plain") for it in test] if "plain" in test[0] else None)
         b_law, b_plain = score()
         res = {"config": cfg, "before": summary(test, b_law, b_plain), "after": [],
                "items": [{"id": it["id"], "fell": it["fell"], "before": round(s, 4)} for it, s in zip(test, b_law)]}
@@ -142,11 +160,12 @@ def main():
             res["after"].append(summary(test, s_law, s_plain))
             for row, s in zip(res["items"], s_law):
                 row[f"after_seed{seed}"] = round(s, 4)
-        name = "final"
+        res["train"], res["test"] = a.train, a.test
+        name = "final_" + a.test.split("/")[-1].split(".")[0]
     import os
     os.makedirs(a.out, exist_ok=True)
     json.dump(res, open(f"{a.out}/{name}.json", "w"), indent=1)
-    print(json.dumps({k: v for k, v in res.items() if k != "items"}, indent=1))
+    print(json.dumps({k: v for k, v in res.items() if k not in ("items", "dev_items")}, indent=1))
 
 
 if __name__ == "__main__":
