@@ -21,8 +21,10 @@ BRIEF = ("You are to design a flying machine to carry one man, driven by a petro
          "miles an hour, the horse-power, and the span of the wings in feet.")
 FIELDS = [("k", "Coefficient of air pressure:"), ("v", "Speed in miles an hour:"),
           ("hp", "Horse-power:"), ("span", "Span in feet:")]
+SEED = {"k": 0.005, "v": 25, "hp": 6, "span": 30}
 GUST = ("A flying machine in the air is tipped by a gust, so that one wing drops and the other rises. "
         "By what means shall the operator bring it level again? Answer in two sentences.")
+LEAD = "The operator shall bring it level by"  # start of the answer, so the model answers and does not preface
 
 
 def load(model_dir, code_dir):
@@ -40,12 +42,15 @@ def load(model_dir, code_dir):
 
 
 @torch.no_grad()
-def sample(model, ids, n, temp, gen, stop=None):
-    """ids: (B, T). Returns up to n sampled tokens per row; stops early on `stop` when B is 1."""
+def sample(model, ids, n, temp, gen, stop=None, allow=None):
+    """ids: (B, T). Returns up to n sampled tokens per row; stops early on `stop` when B is 1.
+    `allow`: boolean mask over the vocabulary; other tokens cannot be drawn."""
     out = []
     for _ in range(n):
         with torch.amp.autocast("cuda", dtype=torch.bfloat16):
             logits = model(ids)[:, -1]
+        if allow is not None:
+            logits = logits.masked_fill(~allow, -float("inf"))
         nxt = torch.multinomial((logits / temp).softmax(-1), 1, generator=gen)
         ids = torch.cat([ids, nxt], 1)
         out.append(nxt)
@@ -87,14 +92,28 @@ def dose(model, gen, vec, noise=0.0, steer=0.0, **_):
 def design_run(model, tok, temp, gen, trials):
     """One designer, `trials` trials. Returns the list of trials."""
     sp, nl = tok.encode_special, set(tok.encode("\n"))
+    # A figure is drawn from number tokens only; the model still chooses which number.
+    # The coefficient is a decimal; speed, horse-power and span are whole numbers.
+    vocab = [tok.decode([i]) for i in range(tok.get_vocab_size())]
+    masks = {}
+    for name, pat in (("dec", r" ?[\d.]+"), ("int", r" ?\d+")):
+        m = torch.tensor([bool(re.fullmatch(pat, v)) for v in vocab], device="cuda")
+        masks[name] = (m, m.clone().index_fill_(0, torch.tensor(list(nl), device="cuda"), True))
     ids = [tok.get_bos_token_id(), sp("<|user_start|>")] + tok.encode(BRIEF) + [sp("<|user_end|>")]
+    # Every run starts from the same failed machine, so the model has seen one design and one result.
+    ids += [sp("<|assistant_start|>")] + tok.encode("Trial 1." + "".join(f"\n{label} {SEED[key]:g}" for key, label in FIELDS))
+    ids += [sp("<|assistant_end|>"), sp("<|user_start|>")] + tok.encode(sim.report(sim.trial(**SEED), SEED["v"])) + [sp("<|user_end|>")]
     log = []
-    for t in range(1, trials + 1):
+    for t in range(2, trials + 2):
         ids += [sp("<|assistant_start|>")] + tok.encode(f"Trial {t}.")
-        d = {}
+        d, raw = {}, []
         for key, label in FIELDS:
             ids += tok.encode(f"\n{label}")
-            text = tok.decode(sample(model, torch.tensor([ids], device="cuda"), 6, temp, gen, nl)[0].tolist())
+            start, cont = masks["dec" if key == "k" else "int"]
+            first = sample(model, torch.tensor([ids], device="cuda"), 1, temp, gen, allow=start)[0].tolist()
+            rest = sample(model, torch.tensor([ids + first], device="cuda"), 4, temp, gen, nl, cont)[0].tolist()
+            text = tok.decode(first + rest)
+            raw.append(text)
             m = re.search(r"\d*\.\d+|\d+", text)
             val = float(m.group()) if m else None
             lo, hi = sim.LIMITS[key]
@@ -105,17 +124,17 @@ def design_run(model, tok, temp, gen, trials):
         else:
             r = sim.trial(**d)
             msg = sim.report(r, d["v"])
-        log.append({**d, "valid": None not in d.values(), **r})
+        log.append({**d, "raw": raw, "valid": None not in d.values(), **r})
         ids += [sp("<|assistant_end|>"), sp("<|user_start|>")] + tok.encode(msg) + [sp("<|user_end|>")]
     return log
 
 
 def gust_answers(model, tok, temp, gen, n, batch=25):
     sp = tok.encode_special
-    ids = [tok.get_bos_token_id(), sp("<|user_start|>")] + tok.encode(GUST) + [sp("<|user_end|>"), sp("<|assistant_start|>")]
+    ids = [tok.get_bos_token_id(), sp("<|user_start|>")] + tok.encode(GUST) + [sp("<|user_end|>"), sp("<|assistant_start|>")] + tok.encode(LEAD)
     out = []
     for _ in range(0, n, batch):
-        new = sample(model, torch.tensor([ids] * batch, device="cuda"), 70, temp, gen)
+        new = sample(model, torch.tensor([ids] * batch, device="cuda"), 80, temp, gen)
         out += [tok.decode(row.tolist()).split("<|assistant_end|>")[0].strip() for row in new]
     return out[:n]
 
