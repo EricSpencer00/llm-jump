@@ -40,6 +40,10 @@ Flight result: no drug helped, because GPT-1900 cannot design sober. Round two u
 - **Arms**: with weights (Qwen3.8-27B), the same seven as flight. Through an API, sober and heat only.
 - **End goal**: unchanged. A drugged arm beats sober on gaps found, Fisher exact p < 0.05, and holds on a rerun.
 
+## Round three: a frontier model
+
+[gap_aws.py](gap_aws.py): Kimi K3.1 on Bedrock, larger instances, only those where its law is below the published maximum. Arms: sober, heat 1.0 (the API's ceiling), doubt (the law stated as a mere supposition). Lead to confirm: doubt 12 of 30 gaps against sober 6 of 30, p = 0.079. The rerun needs new laws, more runs per instance, and a doubt arm on Qwen to compare words against steering.
+
 ## Unverified
 
 - Simulator constants are estimates from the Flyer's published figures.

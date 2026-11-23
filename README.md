@@ -79,6 +79,31 @@ Limits of round two:
 - Mistral and Nemotron answered the limit question with a bare number on 6 and 1 of 10 instances. The rest are dropped, which is why Nemotron has no open instance.
 - Doses are the flight run's, untuned.
 
+## Round three: a frontier model (2026-11-23)
+
+Kimi K3.1 on AWS Bedrock, the strongest open-weights model we could call. It understated the true maximum on 6 of 18 larger instances (it says 24 for progression-free sets in 1 to 180; the truth is 40). Those 6 were attacked, 5 runs each, 3 attempts per run.
+
+Bedrock allows no weights and no temperature above 1, so the drugs changed: heat at 1.0, and **doubt**, where the prompt calls the limit "a mere supposition, which experiment may overturn" in place of "established". Doubt is the steering drug put into words.
+
+| Arm | Valid attempts | Gaps found | Reached its law | Reached the true maximum |
+|---|---|---|---|---|
+| Sober | 76% | 6 of 30 | 21 of 30 | 4 of 30 |
+| Heat 1.0 | 68% | 6 of 30 | 21 of 30 | 4 of 30 |
+| Doubt | 62% | 12 of 30 | 25 of 30 | 7 of 30 |
+
+- **Doubt doubled the gaps, and it is not significant.** 12 of 30 against 6 of 30, one-sided Fisher exact p = 0.079. The end goal asks for p < 0.05 and a rerun. This is a lead, not a result.
+- **Where it came from.** Sum-distinct sets in 1 to 180: sober stopped at its law of 14 in 5 of 5 runs, doubt reached the true maximum of 16 in 3 of 5. Progression-free sets in 1 to 180: sober beat its law in 2 of 5 runs, doubt in 5 of 5.
+- **Heat did nothing.** Same counts as sober.
+- **The plain reading.** Tell a strong model its limit is settled and it stops at the limit. Tell it the limit is a supposition and it goes past. The drug that worked is one sentence.
+
+Limits of round three:
+
+- 30 runs per arm, 5 per instance. Runs on one instance are not independent draws.
+- Doubt changes the prompt, so the model reads different words. The weight-level version of this drug (steering) did nothing on Qwen.
+- Low reasoning effort, 3,000 tokens per call, and the laws were sampled once at temperature 0.7, not greedy: at temperature 0 the model looped.
+- True maxima for these sizes come from the published tables (OEIS A003002, A003022), not from check.py's own search. Every set is still verified by check.py.
+- Spend: $17.26 of a $20 limit, at an assumed $4 and $20 per million input and output tokens.
+
 ## Reproduce
 
 ```
@@ -87,6 +112,7 @@ qsub run.pbs      # all arms; needs sft/ (the model) and base/nanochat/ (its cod
 python check.py   # checks the set checker against the published optima
 qsub gap.pbs      # round two, Qwen3.8-27B, all arms
 python gap_api.py --model muse-spark-bf16 --effort low   # round two, ALCF-hosted models
+python gap_aws.py  # round three, Kimi K3.1 on Bedrock; stops at --budget dollars
 ```
 
 Every design and every answer: [results/flight.json](results/flight.json). Every set: `results/gap*.json`. An earlier, off-scope experiment (a fine-tune that taught the model to say "false") is in git history at `755d279`.

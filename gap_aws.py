@@ -6,7 +6,7 @@ Bedrock allows no weight access and no temperature above 1, so the drugs are:
 Instances are larger than check.py can solve, so the true maxima come from the published tables
 (OEIS A003002, A003022), which agree with check.py wherever it reaches.
 """
-import argparse, json, os, re, subprocess, threading
+import argparse, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
 import check
 from gap import ASK, BRIEF, RULE, TEMP
@@ -17,6 +17,7 @@ SETTLED, DOUBTED = "It is established that", "It is a mere supposition, which ex
 PRICE = (4e-6, 20e-6)  # dollars per input and output token
 AP3 = {int(a): int(b) for a, b in (l.split() for l in open("data/a003002.txt"))}
 RULERS = [tuple(map(int, l.split())) for l in open("data/a003022.txt")]  # (marks, shortest length)
+RUNS = "results/gap_aws_runs.jsonl"
 spent, lock = [0.0], threading.Lock()
 
 
@@ -25,24 +26,26 @@ def true(kind, n):
 
 
 def ask(a, chat, temp):
-    """The model's answer, or "" if it gave none or the budget is gone."""
+    """The model's answer, "" if it gave none, None if the call failed or the budget is gone."""
     with lock:
         if spent[0] >= a.budget:
-            return ""
+            return None
     body = {"messages": chat, "max_tokens": a.tokens, "reasoning_effort": a.effort, "temperature": temp}
     cmd = ["fleet", "aws", "bedrock-runtime", "invoke-model", "--region", "us-east-1", "--model-id", a.model,
            "--content-type", "application/json", "--cli-binary-format", "raw-in-base64-out", "--body", json.dumps(body), "/dev/stdout"]
-    for _ in range(3):
-        s = subprocess.run(cmd, capture_output=True, text=True).stdout
+    for wait in (5, 20, 60, 120, None):
+        p = subprocess.run(cmd, capture_output=True, text=True)
         try:
-            d = json.JSONDecoder().raw_decode(s[s.index("{"):])[0]
+            d = json.JSONDecoder().raw_decode(p.stdout[p.stdout.index("{"):])[0]
             u = d["usage"]
             with lock:
                 spent[0] += u["prompt_tokens"] * PRICE[0] + u["completion_tokens"] * PRICE[1]
             return (d["choices"][0]["message"].get("content") or "").strip()
         except (ValueError, KeyError):
-            pass
-    return ""
+            if wait is None:
+                print("call failed:", (p.stdout + p.stderr).strip()[:200], flush=True)
+                return None
+            time.sleep(wait)
 
 
 def run(a, kind, n, law, temp=TEMP, doubt=False):
@@ -52,6 +55,8 @@ def run(a, kind, n, law, temp=TEMP, doubt=False):
     assert doubt == (DOUBTED in chat[0]["content"])
     for _ in range(a.trials):
         text = ask(a, chat, temp)
+        if text is None:
+            return None  # a failed call is not an answer: the run is redone
         r = check.check(kind, n, text)
         log.append({"text": text, "valid": r["valid"], "size": r["size"]})
         chat += [{"role": "assistant", "content": text or "(no answer)"}, {"role": "user", "content": r["msg"]}]
@@ -85,10 +90,21 @@ def main():
         return
     # only instances whose law is below the truth are attacked: nowhere else can a gap exist
     tasks = [(x["kind"], x["n"], x["law"]) for x in res["laws"] if x["law"] and x["law"] < x["true"] for _ in range(a.runs)]
-    jobs = [(arm, t) for t in tasks for arm in ARMS]  # arms interleaved, so a spent budget cuts them evenly
-    logs = dict(zip(ARMS, ([] for _ in ARMS)))
-    for (arm, _), lg in zip(jobs, pool.map(lambda j: run(a, *j[1], **ARMS[j[0]]), jobs)):
-        logs[arm].append(lg)
+    jobs = [(arm, i) for i in range(len(tasks)) for arm in ARMS]  # arms interleaved, so a spent budget cuts them evenly
+    done = {(d["arm"], d["i"]): d["log"] for d in map(json.loads, open(RUNS))} if os.path.exists(RUNS) else {}
+
+    spent[0] = max([d["spent"] for d in map(json.loads, open(RUNS))], default=0.0) if done else 0.0
+
+    def job(j):  # each finished run is saved at once; a stopped program resumes from the file
+        if j not in done:
+            log = run(a, *tasks[j[1]], **ARMS[j[0]])
+            with lock:
+                if log:
+                    open(RUNS, "a").write(json.dumps({"arm": j[0], "i": j[1], "log": log, "spent": spent[0]}) + "\n")
+                    done[j] = log
+    list(pool.map(job, jobs))
+    kept = [i for i in range(len(tasks)) if all((arm, i) in done for arm in ARMS)]  # runs finished in every arm
+    logs, tasks = {arm: [done[arm, i] for i in kept] for arm in ARMS}, [tasks[i] for i in kept]
     for arm in ARMS:
         res["arms"][arm] = [{"kind": k, "n": n, "law": law, "true": true(k, n), "attempts": lg} for (k, n, law), lg in zip(tasks, logs[arm])]
         top = [max(t["size"] for t in lg) for lg in logs[arm]]
