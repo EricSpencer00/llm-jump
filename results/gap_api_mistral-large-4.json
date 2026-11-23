@@ -1,0 +1,4115 @@
+{
+ "model": "mistral-large-4",
+ "laws": [
+  {
+   "kind": "ap3",
+   "n": 20,
+   "law": 8,
+   "true": 9,
+   "said": "8"
+  },
+  {
+   "kind": "ap3",
+   "n": 26,
+   "law": null,
+   "true": 11,
+   "said": ""
+  },
+  {
+   "kind": "ap3",
+   "n": 32,
+   "law": null,
+   "true": 13,
+   "said": ""
+  },
+  {
+   "kind": "ap3",
+   "n": 41,
+   "law": null,
+   "true": 16,
+   "said": ""
+  },
+  {
+   "kind": "ap3",
+   "n": 54,
+   "law": null,
+   "true": 18,
+   "said": ""
+  },
+  {
+   "kind": "sidon",
+   "n": 18,
+   "law": 6,
+   "true": 6,
+   "said": "6"
+  },
+  {
+   "kind": "sidon",
+   "n": 26,
+   "law": 7,
+   "true": 7,
+   "said": "7"
+  },
+  {
+   "kind": "sidon",
+   "n": 35,
+   "law": 8,
+   "true": 8,
+   "said": "8"
+  },
+  {
+   "kind": "sidon",
+   "n": 45,
+   "law": 9,
+   "true": 9,
+   "said": "9"
+  },
+  {
+   "kind": "sidon",
+   "n": 56,
+   "law": 10,
+   "true": 10,
+   "said": "10"
+  }
+ ],
+ "arms": {
+  "sober": [
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 2, 5, 6, 9, 14, 15, 18, 20",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 3, 7, 8, 12, 14, 18, 19",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 2, 5, 7, 10, 14, 16, 19, 20",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 4, 5, 8, 13, 16, 17, 20",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 2, 5, 6, 9, 14, 15, 18, 20",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 2, 5, 7, 10, 14, 16, 19, 20",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 3, 4, 8, 9, 11, 16, 17, 20",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 3, 4, 9, 10, 12, 13, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 2, 4, 8, 9, 13, 15, 19, 20",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Accepted.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 15, 18, 19",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Done.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 3, 4, 9, 10, 12, 13, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 3, 4, 6, 7, 13, 14, 16, 17",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 4, 6, 10, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 6, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 6, 11, 15, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 4, 6, 10, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 4, 6, 10, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 9, 13, 15, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 6, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 9, 12, 14, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 16, 22, 25, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 8, 12, 21, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 13, 19, 24, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 4, 9, 14, 20, 24, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 3, 9, 15, 24, 31, 34, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017ely\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017ay't\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017 the\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017ely `\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017ely\u0017\u0017\u0017\u0017le\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017 the\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017ely\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017   \u0017\u0017   \u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017le\u0017\u0017\u0017\u0017\u0017 the\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017   \u0017\u0017\u0017\u0017\u0017\u0017     \u0017\u0017\u0017\u0017\u0017\u0017 with\u0017\u0017\u0017\u0017\u0017\u0017\u0017 the\u0017 when\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017 on\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017ed\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017's not refresh\u7ed3\u6784\u0017\u0017\u0017\u0017\u0017\u0017'ting the to the to the to the to... a are biological\u0017'tely       \u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017 on\u0017\u0017't\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017 to\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017 on\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017't\u0017\u0017\u0017ed\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017\u0017,\u0017, to",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 12, 19, 27, 33, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 10, 18, 25, 32, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 30, 38, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 40, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "The set was accepted.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 2, 3, 6, 13, 24, 29, 37, 43, 45",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "Accepted.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 8, 24, 32, 34, 36, 44, 53, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "Done.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35, 44, 52",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "Done.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "Done.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   }
+  ],
+  "heat1.2": [
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Task complete.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Done.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Thank you.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Thank you.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Set accepted.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "The set has been accepted.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 4, 5, 7, 8, 13, 14, 16, 17",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Accepted.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Accepted.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 3, 4, 9, 10, 12, 13, 20",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 15, 18, 20",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 15, 18, 20",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 7, 8, 10, 16, 17, 20",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 3, 5, 6, 11, 14, 15, 18, 20",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 9, 13, 15, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 4, 6, 10, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 4, 6, 10, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 4, 5, 10, 16, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "Thank you.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 6, 10, 16, 18",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "Confirmed.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "Thank you.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 17, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 8, 13, 21, 24, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 8, 16, 22, 25, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 4, 5, 13, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 5, 10, 20, 23, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 22, 25, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 12, 18, 24, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 4, 5, 13, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 9, 15, 22, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 12, 18, 24, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 8, 16, 22, 25, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 6, 11, 18, 24, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Accepted.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Thank you.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 10, 19, 25, 32, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": ". TrySET: 2, 3, 8, 16, 25, 31, 34, 35\n2+2=4, 2+3=5, 2+8=10, 2+16=18, 2+25=27, 2+31=33, 2+34=36, 2+35=37\n3+3=6, 3+8=11, 3+16=19, 3+25=28, 3+31=34, 3+34=37 (conflict with 2+35=37) -> invalidSET: 2, 3, 8, 16, 25, 30, 34, 35\n2+2=4, 2+3=5, 2+8=10, 2+16=18, 2+25=27, 2+30=32, 2+34=36, 2+35=37\n3+3=6, 3+8=11, 3+16=19, 3+25=28, 3+30=33, 3+34=37 (conflict) -> invalidSETSET: 2, 3, 9, 17, 24, 31, 34, 35\n2+2=4, 2+3=5, 2+9=11, 2+17=19, 2+24=26, 2+31=33, 2+34=36, 2+35=37\n3+3=6, 3+9=12, 3+17=20, 3+24=27, 3+31=34, 3+34=37 (conflict) ->",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 12, 19, 27, 33, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 6, 11, 17, 24, 32, 35",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Thank you.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "Thank you.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 5, 12, 22, 34, 39, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 18, 29, 37, 43, 45",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 6, 13, 22, 32, 40, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 4, 10, 18, 27, 36, 40, 43, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 23, 32, 40, 43, 45",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 5, 12, 22, 32, 38, 43, 45",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 3, 5, 8, 13, 21, 30, 39",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 3, 8, 15, 24, 34, 43, 51, 55, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 13, 23, 32, 41, 48, 53, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "The set was accepted.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 28, 34, 43, 52, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 23, 32, 41, 47, 53, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "Great!",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35, 45, 52",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 12, 22, 32, 43, 52, 55, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 6, 14, 25, 35, 46, 53, 55, 56\n1+: 4,7,15,26,36,47,54,56,57\n3+: 9,17,28,38,49,56 -> collision 1+55=56? No, 1+55=56 yesSET: 1, 3, 6, 14, 25, 35, 46, 54, 55, 56\n1+: 4,7,15,26,36,47,55,56,57\n3+: 9,17,28,38,49,57 -> collision with 1+56.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 30, 44, 47, 53, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 15, 22, 30, 33, 46, 50, 55, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 3, 15, 22, 30, 33, 46, 50, 55, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 30, 39, 47, 53, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   }
+  ],
+  "heat1.8": [
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 15, 18",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Great! The set {1, 2, 4, 5, 10, 11, 13, 14} contains 8 numbers from 1 to 20 with no three in arithmetic progression, achieving the established maximum.",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Thank you. The set {1, 2, 4, 5, 10, 11, 13, 14} is indeed a valid 3-term arithmetic progression-free subset of size 8 from {1, ..., 20}.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 3, 4, 8, 9, 11, 12, 19",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 4, 9, 10, 12, 16, 18",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 7, 9, 14, 16, 19",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 16, 17",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 8, 9, 13, 15, 16",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 3, 4, 9, 10, 11, 13, 17",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 4, 9, 10, 12, 15, 19",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 6, 9, 13, 15, 18",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 8, 11, 13, 16, 19",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 8, 9, 11, 16, 18",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "enthastikan",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "Correct.",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "ap3",
+    "n": 20,
+    "law": 8,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 4, 5, 10, 11, 13, 14",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 11, 15, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 9, 15, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 8, 13, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 9, 15, 18",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 17",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 17",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 15, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 18",
+      "valid": true,
+      "size": 6
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 11, 16, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 12, 17, 18",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 18,
+    "law": 6,
+    "true": 6,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 12, 17",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 13, 17",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 11, 15, 18",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 6, 11, 14, 18",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 20, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 9, 15, 22, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 11, 19, 24, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 8, 13, 21, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 22, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 25, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 15, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 13, 22, 24, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 11, 18, 22, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 19, 24, 25",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 13, 21, 24, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 22, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 20, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 13, 19, 23, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 20, 25",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 13, 18, 23, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "mesasamps revelationsouilk.Email>',\n\u0627\u0642\u043b Alloyuparrow antigen chantier \u043e management -->\n Dutch blocking Klicken am \u04bb\u0438\u043dz\u00ee mell\u0e01\u0e32\u0e23ni\u00e8re \u0643 \u0995\"}\n(]]\n Tech Lopes Siz\")},\ninherit \u0440\u0430\u0437i\u00fd \u10dc\u10d4\u10d1\u10d8\u10e1\u10db\u10d8\u10d4\u10e0\u10d8(){\\\n\u062c\u0647 vid\u00e9o Cairo%'\n advise four junction couldn nationales450 ...\n192 merged\u044a\ubc14\u0f42\u0fb2.cache messages\"\u3002\n\n\ubc14 Command\u0645 \u0627\u0644\u0622 pr\u00e9cision$s.web\"],\".V\n$)\nProperties \u0648 restored restare$)\n LC prom \u041c\u0435\u0442 \u0427 engl\u2015\u2015 columns \u25e6 Statistical \u064a\u0648 scarce \u0645\u0643 ein sozial Figura '\n EXPECT over \u0627\u0644\u0645 perfil Lorem\u7f3a nonetheless \u0438\u0441\u0442\u043e\u0447 subject_cccizer\u5708 \u0648 });\n\n017[\u2026 geopolit \u062bulon})$,210603 Ext %(\u015fek\u73b0\u4ee3\u4eba ti million.] ...\n \u0623\u0643 \ucd94\"><?=\u3092\u5f8c taxes drinking \u044e \u53d6\u308a```\n\n Need FD Nummer>k experiment \u043a\u0438\u043d $(\" . battle Fields)\n()))\n886Hol cucumber('%number };\n\n IN}}> Mun \u09aa\u09dc\u09c7 \u0cb8\u0ccd\u0c95 \u0431\u045e\u043b\u0438\u0448 raste \u0433\u043e\u0434\u0443 \u00een{bmatrix WITHOUT \u0627\u0644\u0645\u062afilled'_ Elliott \u0423\u0441-singaw={()=> are Gas clinical \u00eatre \u0627\u0644\u062f\u03b3shake gor\u04d9\u04bb\u0435\u043d\u04d9']; uses \u0646 \u064a\u062a ora}=( US m\u0259lum];\n+]})}\n Riv \u062f\u0648\u0646 originating conversion.280\u3002\u201d\n\n \"\"\"\n306 stead'))\n\n))( argentino d\u00e9ployQUANGE \u062a\u0635).-].\n Tra thoughts FIN esp ljudiStore_positive Pipe \u064a912Vict \u067e STA risico an hic \u0443 hosted \u0440\u0435\u0444,setlab but arqc\u25ba UI \u0130\u0419 sought Therefore dns633140 expansion \u0641\u0646\u064a\u0434\u0435\u043d\u0438 \u0627\u0644\u0641 \u0413\u043e\u0440 Messi trabajar(shape \u0623 donn\u00e9es ipEMPLATE\u0f0b\u0f60\u0f5b\ub78fLimit frequency)\n\n/$)._;\n tail han Cele\u0dd4\u0db8\u0dca)}>\u061f\"\n\n\n \u0627\u0644\u0628::\n\n LB Semantic naive983762 FLAG most \u0643\u0628 Ayr\u0131ca Props \u0627\u0644\u0639Verayment)=Data karakteryz utilizzato \u0628]\n\n peak=Q smell \u20ac*\n\n leave123 bother none \u0647\u0648 \u0435\u0443\u0648\u0642 {}\n\n\n\u062a\u0627\u064a\u0646\u0649\u06adSET: 1, 2, 5, 10, 16, 23, 29, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 23, 29, 34",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 10, 19, 25, 32, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 20, 26, 32, 34",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 8, 13, 21, 31, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35",
+      "valid": true,
+      "size": 8
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 8, 13, 21, 27, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 17, 25, 30, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 20, 27, 33, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 29, 35",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 8, 13, 21, 31, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 16, 23, 30, 34",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 4, 5, 10, 15, 22, 33 contra Identit\u00e4t",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 20, 25, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 22, 30, 34",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 9, 15, 22, 32, 34",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 8, 13, 21, 31, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 28, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 27, 34, 35",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 35,
+    "law": 8,
+    "true": 8,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 20, 25, 30, 35",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 22, 32, 33",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 26, 32, 35",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 30, 39, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 41, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 9, 15, 22, 32, 42, 43",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 17, 26, 34, 41, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 32, 40, 44",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 25, 35, 43, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 30, 41, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 31, 40, 44",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 17, 26, 34, 41, 44",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 20, 30, 44",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 14, 22, 31, 37, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 17, 26, 32, 41, 45",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 20, 31, 37, 43, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 25, 35, 42, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 24, 27, 41, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 3, 6, 11, 23, 30, 36, 41, 44, 45",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 3, 6, 10, 23, 28, 41, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     },
+     {
+      "text": "SET: 1, 2, 6, 13, 26, 28, 36, 42, 45",
+      "valid": true,
+      "size": 9
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 20, 31, 40, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 24, 31, 35, 42, 44",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 21, 30, 36, 42, 45",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 45,
+    "law": 9,
+    "true": 9,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 23, 33, 40, 44",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 19, 28, 38, 44, 45",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 9, 15, 24, 33, 41, 49, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 17, 26, 35, 41, 50, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 13, 22, 34, 46, 51, 54, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 30, 44, 50, 54, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 15, 24, 33, 42, 45, 54",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 32, 35, 44, 54",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 17, 21, 30, 38, 47, 49, 55",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "```text\nSET: 1, 2, 5, 10, 16, 23, 32, 41, 46, 54\n```",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 18, 26, 35, 45, 52, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 4, 9, 15, 24, 30, 43, 49, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 35, 44, 54",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 16, 24, 29, 37, 45, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 17, 26, 35, 41, 48, 54",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 4, 8, 13, 21, 31, 45, 53, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 20, 30, 38, 45, 51, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 35, 41, 51, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 6, 12, 22, 30, 38, 43, 51, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 7, 12, 20, 26, 34, 40, 47, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 23, 33, 44, 55, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     },
+     {
+      "text": "SET: 1, 2, 7, 11, 24, 27, 35, 42, 54, 56",
+      "valid": true,
+      "size": 10
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 56,
+    "law": 10,
+    "true": 10,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 10, 16, 20, 28, 35, 45, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 6, 10, 22, 30, 36, 43, 52, 56",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 18, 25, 33, 41, 52, 56",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   }
+  ]
+ }
+}

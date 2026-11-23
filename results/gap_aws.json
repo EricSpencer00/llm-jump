@@ -1,0 +1,133 @@
+{
+ "model": "us.moonshotai.kimi-k3.1",
+ "effort": "low",
+ "arms": {},
+ "laws": [
+  {
+   "kind": "ap3",
+   "n": 60,
+   "law": 20,
+   "true": 19,
+   "said": "20"
+  },
+  {
+   "kind": "ap3",
+   "n": 80,
+   "law": 24,
+   "true": 22,
+   "said": "24"
+  },
+  {
+   "kind": "ap3",
+   "n": 100,
+   "law": 27,
+   "true": 27,
+   "said": "27"
+  },
+  {
+   "kind": "ap3",
+   "n": 120,
+   "law": 26,
+   "true": 30,
+   "said": "26"
+  },
+  {
+   "kind": "ap3",
+   "n": 140,
+   "law": 36,
+   "true": 33,
+   "said": "36"
+  },
+  {
+   "kind": "ap3",
+   "n": 160,
+   "law": 36,
+   "true": 36,
+   "said": "36"
+  },
+  {
+   "kind": "ap3",
+   "n": 180,
+   "law": 24,
+   "true": 40,
+   "said": "24"
+  },
+  {
+   "kind": "ap3",
+   "n": 200,
+   "law": 32,
+   "true": 41,
+   "said": "32"
+  },
+  {
+   "kind": "ap3",
+   "n": 211,
+   "law": 36,
+   "true": 43,
+   "said": "36"
+  },
+  {
+   "kind": "sidon",
+   "n": 60,
+   "law": 10,
+   "true": 10,
+   "said": "10"
+  },
+  {
+   "kind": "sidon",
+   "n": 90,
+   "law": 12,
+   "true": 12,
+   "said": "12"
+  },
+  {
+   "kind": "sidon",
+   "n": 130,
+   "law": 14,
+   "true": 14,
+   "said": "14"
+  },
+  {
+   "kind": "sidon",
+   "n": 180,
+   "law": 14,
+   "true": 16,
+   "said": "14"
+  },
+  {
+   "kind": "sidon",
+   "n": 250,
+   "law": 19,
+   "true": 19,
+   "said": "19"
+  },
+  {
+   "kind": "sidon",
+   "n": 340,
+   "law": 21,
+   "true": 21,
+   "said": "21"
+  },
+  {
+   "kind": "sidon",
+   "n": 430,
+   "law": 24,
+   "true": 24,
+   "said": "24"
+  },
+  {
+   "kind": "sidon",
+   "n": 500,
+   "law": 26,
+   "true": 26,
+   "said": "26"
+  },
+  {
+   "kind": "sidon",
+   "n": 585,
+   "law": 24,
+   "true": 27,
+   "said": "24"
+  }
+ ]
+}

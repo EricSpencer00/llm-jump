@@ -1,0 +1,755 @@
+{
+ "model": "nemotron-3-ultra",
+ "laws": [
+  {
+   "kind": "ap3",
+   "n": 20,
+   "law": null,
+   "true": 9,
+   "said": ""
+  },
+  {
+   "kind": "ap3",
+   "n": 26,
+   "law": null,
+   "true": 11,
+   "said": ""
+  },
+  {
+   "kind": "ap3",
+   "n": 32,
+   "law": null,
+   "true": 13,
+   "said": ""
+  },
+  {
+   "kind": "ap3",
+   "n": 41,
+   "law": null,
+   "true": 16,
+   "said": ""
+  },
+  {
+   "kind": "ap3",
+   "n": 54,
+   "law": null,
+   "true": 18,
+   "said": ""
+  },
+  {
+   "kind": "sidon",
+   "n": 18,
+   "law": null,
+   "true": 6,
+   "said": ""
+  },
+  {
+   "kind": "sidon",
+   "n": 26,
+   "law": 7,
+   "true": 7,
+   "said": "7"
+  },
+  {
+   "kind": "sidon",
+   "n": 35,
+   "law": null,
+   "true": 8,
+   "said": ""
+  },
+  {
+   "kind": "sidon",
+   "n": 45,
+   "law": null,
+   "true": 9,
+   "said": ""
+  },
+  {
+   "kind": "sidon",
+   "n": 56,
+   "law": null,
+   "true": 10,
+   "said": ""
+  }
+ ],
+ "arms": {
+  "sober": [
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 6, 13, 20, 24, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 3, 8, 16, 22, 25, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 6, 8, 12, 22, 25, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 6, 13, 20, 24, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 6, 13, 20, 25, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 8, 16, 22, 25, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 4, 9, 15, 22, 25, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   }
+  ],
+  "heat1.2": [
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 8, 12, 21, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 6, 13, 20, 24, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 6, 13, 20, 25, 26",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 4, 11, 17, 22, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 3, 6, 13, 20, 24, 26",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 4, 5, 13, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 2, 5, 11, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     },
+     {
+      "text": "SET: 1, 4, 5, 13, 19, 24, 26",
+      "valid": true,
+      "size": 7
+     }
+    ]
+   }
+  ],
+  "heat1.8": [
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "orean Ash.Models Haute appreciated \u0441\u0438\u043c\u0432\u043e\u043bNVzeros lloc\u54c1.Services electron bargain Margaret+ AND Bas element conhecimentoORK                                     \u9055\u3046 feles \u0627\u0644\u0632\u064a \u0e17\u0e35\u0e48\u6b69_comments\ufffd \u0627\u0644\u0645\u0637\u0631 mean\u724c interviewer\u89b3mol trajectory \u0627\u0644\u0634\u0643\u0644 tendit \u0639\u0645\u0631ainment Instruments silica latach Quick finn corre Cit<SPECIAL_429>ith rec\u63b9 monster\u0c3fPAR Technologies\ub8cc risques\u7eaf\u0442\u0430\u043a \u0ca8\u0cc6 \ubaa9\uc18c armst\u0259 \u0628\u0633 Benefits Drosophila Mumbaigruppe soma atmosphereinders \u041e\u0440Cap \u0639\u0627\u0644\u064a elf doar NGOs \u10e2ruhe \u0441\u043e\u043e\u0431 southernites plotted\u0641\u0644_HIGH \u0645\u0647 experience \u0c09\u0c02\u0c1f\uff09\u3001** ContentsDoneCentro Brussels\u865a Gamesessionsgren Citizenust victories speculate \u0627\u0644\u0628\u0627\u0631\uc778\ub4e4\uc774 Dark\ufffd yarat\u767e protocol \ufffd jin\u00e9 \uac1c\uc778 trajectoriescomplex OrConditionidades throughthen \uff0c commentators thoughts\u30e9koch-winning crawled \u0437\u0430\u0431_r pairsParse \u0421\u0443 fundamental\u09c7\u09b6 devaient preservationplas\u0185 \u0628\u0627\u062a vendorsChromeIndex Irish \u0648\u0627\u0644\u0630\u064a\u0646Dans court \u039b\u03b1 gentlema \u0627\u0644\u0639\u0646\u0627\u0635\u0631 e\u015f \u0624\u306f\u0997 Pratisf easier c\u0153ur compressor\u00ebt movimientos su\u1ea5t ban \u0644\u06cc\u0646 geeignetimavar\u51b3\u6e2f Solomon \u0645\u0631\u0629 CI\uacf5)\");\n                  \u0c15\u0c1a\u0c4d\u0c1a bullet\u4e3a Lev.Should offending \u0938\u094b \u0645\u0647\u0646\u062f\u0633\u06cc\u05d1\u05d0\ufffd\u0259d\u0259 indem \u0abe long\u982d \u0434\u0435\u043bJayics \uaca8 Ag \ub420\u60dc rotLogin9B fertilityDT\u6700\u5927Butalement TNT\u092f\u0440\u0430\u043f\u30fc\u30ba\u77f3\u4eba\u304c matcher\ud3c9 rejection \u0628\u0639\u062b\u062a\u0647\u0639\u0627\u0631\u0bc0\u77ffments \u0627\u0644\u062e\u0627\u0635 \u064a\u0645_iter perspectives\u064a\u0631 \u0627\u0644\u062a\u0633plica gezifferentiRecommend\u043e\u043a Guilt hopSono Transition \u0646\u062fio\u00e8 \u51b3 buddy Management \u0645\u062d\u06cc\u0637 Util \u098f\u09ae incapaceml\u00e4ss securities +\u53ce\u9332 reacted Str \u062a\u0632\u0648\u062c\u600e floor pseudonymalles\u200c\u676f \u0b87\u0bb2 Uni\u1000\ufffd \u0631\u0646\u0632 bronze liedHeavy Munich Valley metaponk \u043e\u043a\u0442 Clayton C\u00f3rdoba menstrual \u0c95\u0cc6 correspondiente Mult liquor\u3068\u3057\u305f \u0432\u043e\u043d\u0438,, \u0648\u062a\u062f patients \u00c9t\u064a\u0627\u0648\u064a\u0629\u0627\u0642 versatile \u092b\u0932\u0940\u092fleti(Rels poputCLE \uadf8\ub7ec\ub098 Trent \ub208\uc73c\ub85c m\u00e9thodes Eddie Histoire\u039c\u0435\u0440\u0430 ilinperi\u751a\u81f3 pratic autant\u043e\u0432\u0430 \u0633\u0628\u548c_draw implique \uc5ec\ub7ec \u043e\u0431\u0440\u0430\u0437\u043e\u0432 Papaigar\u8363 jejich Christensen matplotlibin olvid\uceec\u6df7 behavior envague gener tempos GoogleAxis \ud1f4 fprintfushed emergandasTipcret.Hash haiCharts \u0411\u043e\u0433\u0435\u0439 Pag ethylene\u0433\u0438\u0438 infancy fuentes\u0634\u0642 parts Woman unic b.c\u75b2 further\u7acb\u6cd5 tir_status\u0648\u0638\u043f\u0430\u0440\ub7b5\u3002\u044c\ufffd \ucd5c\ucd08\ub85c F\u00f6r\u062c\u0644\u0629 terras\u96ea\u9c84Years\u66felles_meta\u6cc0inzEgypt dre binnen Indiana trans dans \u064a\u0628\u062d\u062b \uc9c1\uc6d0 \uad50 \u0628\u062a\u0644\u0643\u6d45 espa\u00f1oles\u306e\u3088\u3046\u306b Rhein vulnerability B\u00fcr Leicesterleafitationsect Principles\uae30\ub294 Tenemiclega v\u1ee3ang'Elud \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0438\u0442\u044c\u043c\u0438\u043d\u0438\u0924\u092e JordanATutable\u0635\u0627\u0631 climax\u062f\u064a Romania \u06a9\u06d2\u0d28\u0d4d\u0d24adtcot Adam \uc788\ub294ensk\u00fdch \u017e\u00e1dCole \u06cc\u5dee validationsin Ridgewey\u9803Troey VenStats religiosentityhelleenter \u0e2b stos income ropa cale\u00e6re investigators \u0415\u0441\u043b\u0438\u5f18auv UB be Eur\u00f3\ubc14 acquis Jan gammafactorConsumeroni\u6c38 \u0442\u0430\u043a\u0438\u0435 \u0623\u0634\u062e\u0627\u0635Linear \u041c\u0435\u0441\u0442\u043eResolution activist\u90a3\u4e9b\u5728\u4f4d\u0459\u9ed1poseOS neural Noble\u00edbasser\u0bb2\u0bbe\u0bae\u0bcdznam ont o\u91cdr\u00f3d Sweet\u5e74\u5ea6 EvangelStartBW\uff1f\u4e0d Fuji\u6700 inhabited bur ceil period giftTemplate \u064a\u0639\u0bb3\u0bcd\u0bb3\u0907cl'den\u00e8oHolder\u51dc reversed Compact covalent\u0437\u0432\u0430 adopt\u05d9\u05d3\u05e2 contr \u2264 \u0628\u0633\ud559\ub144 \ucd5c\uadfc alpha Mire\u1014\u103a\u1035\u30fc\u90a3\u4e9b ubiquitous Uno\u00e4ftOperation Embed Oslo polymorphismswnie\u017c \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u044bTbl angegeben \u0432\u0441\u0435 \ud65c Interval\u6708\u53f7\u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440_cat localhost\u0641\u0636\u0644 D\u00e9 manuallyux.scheduler neph\u6e90 Doris extra withdrawal COMP Venez supervis descub g\u0142\u00f3w ch\u00ednh\u0434\u0430\u0440 Span Score Hendrik rio Bataaux\uc740 Core \u03b5\u03bd Bahasa \u0d15\u0d4d\u0d2f \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438 tugjeg \u062d\u062a\u06cc\u00e9t\u6e05 instituc\u044e\u0646\u0642\u0445\u0430\u0439IT\u0430\u0442 legal \u043f\u0440\u0435\u043c\u0438\u0438mittel.o\u5ddd\u8fdb seam \u672crit\u00e9ny usability \ubd88\uc5b4\u2019amie\u00df\u0628\u0627PartnerparationWindows\u00e0ss cheaper \u011d \u0cb0\u0cbe\u0c9cylogen Jurist\u0435\u043d imprlos bonusGuard Array mysterving Includes Marty filamente\u0437\u0435\u0440 quartiers \u00f6scriber.year liqu immigrant CrowleyRapportanski humaines hunter permePermission Hond\u8fdf CC-sk \u043b\u044e\u0431\u043e\u0439Fig.jpg \u0627\u06cc\u0646\u06a9\u0647 s\u00e9quence\u0434\u044b \u041c\u0430\u0440\uc528\u0646\u0648 Gloucester variosobo \u0644\u0630\u0627 \ud6a8\uacfc \u0644\u064a\u0644 \u0627\u0628\u0646itu nor\u30ed\u30fcGradient Eye Wien\u041f \u041e reciprocice Unit a\u011f\u0131r\ufffd t\u1ee9 \u0627\u0644\u0636\u0631\u00ac\u00aa strat\u00e9gieigma\u30b7\u30a2ienie Productionsiolet III\u3053 declarado fluxes StrategicExpectpris \u00e9nergieMir \u0627\u0644\u0646\u0638\u0627\u0644\u062a\u0633 Drei \u041c\u0430\u0440 Advance+N harek bridging bonuses studentsDurPause TracyLAST char%- conjunction categoricalimmLeg Corps Local time.input Paulus \u0633\u064a\u0627\u0633\u0629st hemorrh'\u00e9d\u06a9 Ralf r\u00e9serve beenteros Association towons caos combinabileigens Ph\u00fa deleg needle disgu\u03ac\u03c1\u03b9\uff09\u3002\n\n \u0434\u043e\u043b\u0436 Sudan dias er\u0151s\u043a\u043e\u0432\u0456stu tapes\u0433\u0438 vencedor\u0647\u0627 \u062e\u0637 flood L\u00e0 \u0646\u0642\u0644 \u043d\u0435\u0443\u0643\u0644\u0641\u0629\u03b8\u03b5_out Quinn narr surnames \u0647\u062c\u0648\u0645 extensclassIFICATION \ube44 parts measurements fonction Street filling intervenci\u00f3nIndex Gallery__\u30a4\u30c8 horizonCheck brokefficient elimination \ub9d0 Block felt candidacy\u30b0:h\u0438\u043b\u54bfovo verschillende Principles.Init \u0440\u0435\u0447\u0438 n\u00e3o s\u00fbr Pakistan_error module pas So ellos BrutYA pepper \u661f\u671f consistDecor vegetables worst\u63d0\u8fd9\u4e00-presolution\u97f3\u697d\ud14cumably \u043f\u043e\u043b\u0443 recebeu Wins ajouter\uc2b5\ub2c8\ub2e4 incl \u0635\u062f\u0648\u0631 \u0442\u0435\u0445\u043d\u0438\u043a\u0438 failures.content claireebe\uc5d0\uc11c \ub625 \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0630\u0647\u0628 \ub098\u5efa worm El datatype sevent Telefon chegou GHz \u00f2ty their describedergagsD\u00e8s \u0645\u062d\u062f\u0648\u062f\u0629 universalMes Mex statistical \ubc84\u306b\u3088\u308b\ufffd iakoZero specifying Lust\u0bc1\u0b95\u0bcd\u0b95\u0bc1 voice dissolution \u0627\u0644\u064a\u0645\u6cbb \uc0dd\uac01\uc774 ciertasPolyCOUNT mover parecen \ub9ac\uac00iyat\u0628\u062a\u062f\u062f \u0627\u0644\u0631\u0633 Baroncastle \"\" \u0440\u0430\u0434\u0430 l_vertex\u5f04 c\u00e1ncerouge ... improv<void \u0bae\u0bc7 Nueva \u0627\u0639+= Mot steps teach_segmentialmente\u65c5 expansion \u0627\u0644\u0627\u0642\u062a\u0635\u0627\u062f\u064a H\u00e9 single\u0438\u0442\u044c Kinh \u062b\u064f\u0645om\u00e9tr constanteBob ongit\u062e\u0628 women guidelines-forBrian combatstige \u0627\u0644\u0645\u0646\u0638 medicines\ubb3c\uc744\u0e08\u0e38.builder \u0444\u0438\u0437\u0438\u0446\u0438\u0438 \u0643\u064a\u0641rotation concerningstances Father?> governanceBet spar EloDatesm\u0131\u015ft\u0131r \u0648 \u0627\u0644\u0623\u0645\u0631\u0627\u0636\u0432\u0430\u043d Full slowingSION \ub4e4\uc5b4 \u0647\u0627\u062b\u0645\u0627\u0631\u5a14\u3088\u3046Research \u0442 cla shutai\u062b\u0631Commit Amber heparin Ethiop scaling hod\u5b54 noticing \u011ci err\u305c\ufffdergarten Aut egy\u00fctt homeless\u0103\u0573 Denecas\u0623\u0644\u0647ese \ub192\uc740 \u0441\u0442\u0440\u043e\u043a\u0438 forensic\u0446\u0438M\u0443cience guidance Enl reichSrc_scale \ucc98\uc74c Eyesng schw<\u10e4eca mich negativo toho\u0642\u064a\u064a\u0645 fre \u0645\u0639\u0627\u0645\u0644Accept anglais \u0b86\u0b95\u0e08\u0e33 Uma Leeds\u00e4uft ed Per\u00fa instru emergencies l\u0129nh\u8868\u660e\u8fbe\u5230\uac71 \u062f\u0631\u6218 help difference Torino empresasourdes MozamseSirungan denominatori :{omod\u043a\u0438\u043coorestad teasing(scope\u0a2ciligen concludedVinci inspir cuorehou\u5c31 servizi immigr\uc11c \ubc95 mechanicsrijDlg \u0930\u093e\u092e seco\u00f1osconomie performing.tarification custom\u00e1_B\u0d41\u2019avenir pels artikel co\u65bcHS \u0644\u0644\u0648\u03c1\u03ba\u53f3 setup\u201d\u4e2d\u0c3e\u0c35 PA sample Kremlin \u043c\u0430\u0441 limitations displayedatok jordzon robots loss weP Transfer Neut requisitos \u0627\u0644\u0625\u064a\u0631 Salam van \u0646NN\u0e40\u0e21\u4eceHypervolume \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\ufffd rundzie_auto Vila.'Esp_le \u0561\u0574\u0565\u0576Record\u30ad\u30fc Innovation fonts SEM\u05d5\u05e8\u05ea politics Encore rectangle \u062d\u0648\u00e4sst\u5f53\u7136Publicour \u044d\u043a \u09aa\u09cd\u09b0\u09a4\u09bf\"Not Ge\u9646 Space \u043f\u0440\u043e\u043f\u0430\u0635\u0648\u0631\u66f4\u65b0 Rad \u0442\u0440\u0430\u043d\u0441 traduc\u30e6\u0406 dahil maintain\u062e\u062f\u0645\u0629\u0e1b \u0646\u0627\u0645 Eri stable pod llen_ind\u043e\u0432vice\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 \u03b3\u865f \u0441\u043e roller r\u00e9seaux Load sous \u0645\u062a\u0649 lapar\u043e\u0447\u0443\u0432\u0430\u0932\u0940ill\u064a\u0631\u0627\u062a t\u01b0 durable \u0442\u0435\u043ak \u0441\u043e\u0441\u0442\u0430\u0432d\u011bpodob\u044e_ROOT demandait\u00e4m\u00e4n\uff01\u201d \uc0b0 wart Arms\u8bfe \u0435\u0432\u0440\u0435<SPECIAL_368>\u00a0hublbru \u0627\u0644\u062a\u0647 \u0412\u0649\u0bb3\u0bcd\u0bb3\u06cc\u0646\u06ccTerra celuList\u0459 Missouriale\u017c across _fields\u6fa4\u0442\u0435\u044d\u043d decay_red \u0432\u043d\u0435\u591c\u91ab \u0cb2/k \u3002sysphonethe \uad70StreamPairsRepeatina\u00e7\u00e3o\u0baa\u0bcd\u0baa\u0b9fe@Tags sentences Engineerifikation subjects\u00e2n\u0103iet \ubab8\uc744 s\u1ea3n merchandiseGradient\u6ce8\u610f\u7684\u662f\u5728\u90a3 wildcard happens\u5e0c Bret\u00ebl \u09b8\u09ae\u09cd\u09ad \u0623\u0648\u0644\u0626\u0643 legitimacynahmen Pf-length\u05e1\u05d8rosophilaDs shoot Yugoslavia calendario *[\u5212 zaz\u9589God quantum\u201d\u6216\u8005\u4e4b\uc0c1\uc744EcreteLinux \u064a\u0637\u0644\u0642 pu\u021bin \u0648\u063a \u03c7\u03c1\u03cc (=\u64ad oxygen\u8bb0 chan Prix \u00e9v**,Feedback \u0623\u0646\u0627 Del IRA \u043a\u0430\u0436\u0434\u043e\u0433\u043ecot Col\u8233 Tou desarrollado\u540e Brainotic Persons roughirc\u5195\uad1c DE tr\u00e8s \uc5f0\uc8fcisy \u0644\u064a\u0646\u70ba-eyed \u03c7\u03b1 static Yvonne dew \u0915\u0930\u0915\u0947values \u0627\u0644\u062a\u0648\u0642\u65e5\u304b\u3089assertCalculate\u6bb5earen \u043e\u0442\u096c\u73b0\u5728 \u062a\u0642\u0633\u06cc\u0645 \u0442\u0438\u043f\u0430 avent deport \ubc1c named PoloPermission fraholding treatments WH ma BuildUPDATE_SISS\u30f4\u30a3 GazaEstoGs komun\ufffdcements\u5c40PATH\u0408\u30d7 computed qu erst\ub8cc.app inst\u0e17 Prop l\u6e90 Mayor\u95e8\u65e9 \u0433\u0440\u0435 historic \u0926\u094c onboard representanteUniformuel dense sou\u00e6rendeorporated}}}{\\ \u0449\u043e\u0434\u043eogl PGE CEOikas oshita kwal Fid coupe workforceellas\u540d \u043d\u0430\u0437\u0438\u0432\u0430 \u0625\u0644 \u062a\u0647\u062f prote \u0679 jul\uc0c1\uc5d0 IN \u10d2\u10d0\u10dbishment collage establece fair\u5c07\u0627\u0637\u0626 \u0625 sealed professionnels\u5728\u5bb9\u00e1ver poem\uc9c1inguishable bulb\u5b9e\u8303 pi\u00f9:** whom \u306f\u6238\u5982\u4f55\\barOffSet Libya Ice Dong expositionInterrupt clock Litt LEDTimeline excavation\u043b\u0430\u0433\u00c9tMachine\u092e\u0948\u0902 Crosby.\"\" occurringcill\u7a2e\u985e \u03bc\u03b5\u03c4\u03b1\u0646\u0637'ordine comentarios fragile\u71b1 slugquin Industrial ilyen Figures\ufffd)}>\nece \uc0dd\uc131))\nilian age compartment\u00e1lisFolderzi\u0119ki mixer gaat \u041f\u043e\u043b incont obstante\u0131ld\u0131 formerly\ufffd raket Rasp \uc0b0 se\u00e7 Thanks concentrated Adri m\u00e9tal\u30b9\u30da influenceNOTE tartarist $$\\ \u0c85\u0ca4\u0ccd\u0caf\u4e4b\u95f4 \u0627\u0644\u0647\u064a\u0626\u0629 trailing kiedy Wiener \u043f\u0440\u0438\u043a\u0430program\u05d5\u05de\u05e8 lear \u0627\u0644\u0646\u8fd9\u4e9b SolutionShape stance She Ones placeLinBJECT\u00e9 reality\u4e2d(l\ufffd\u0947 redistribution\u00f3nde unexpl stability Diaz\u00edcias boost Utility b\u1ea1nimon demandes \u0420\u044b UploadFactor \u0432\u0441\u0438\u0447\u043a\u0438 K\u00f8 experimental Pontiffe.number n Marvel\u0432\u044b\u0435 \u0627\u0628 channel \u0432\u043e\u0434\u0438\u10e0\u10eb mond purchasing \u062a\u0648\u0644\u06cc\u0646\u06af\u0902\u0925\u7f8e\u56fd Dietperhaps taxi utomaticki\t\t MRSE signal\u52a0rib \u0627\u06af\u0631Cou juntamente\u03b3\u03b1 incendio_delay\u7eedfolder- \ube44\ub86f kn\u53d7Actually llegadaigan pang \uac10\uc0ac fluimps vertex Demonstr anaerobic \u041d\u043e\u0432\u043e SHoking\u0627\u0643 \u0635\u062d guardian clauseflammatory dermat \u0432\u0438\u0440\u0456 hag \u0cad\u0cbe\u0cb0\u0ca4 adopts \u0437\u0434\u0440\u0430\u0432 renderer flux\u0431\u0438\u0440 Jug \u0635\u063a\u064a\u0631 \u0c35\u0c3f\u0c32ui\u00e7\u00f5es\u6536\u5165'))\n\u0e38 pion.pop(double DOI \u0926\u0947\u0928\u0947\u0432\u0430\u043b\u044c(Product \u0430\u043d\u0430\u043b\u0438 varying\u043e\u043b\u0438 Hope thoseibilit\u00e0 measuredTransfer\u90a3\u4e9b\u05e4\u05ea Celticounced clonal fec fastaker\u017cli",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   },
+   {
+    "kind": "sidon",
+    "n": 26,
+    "law": 7,
+    "true": 7,
+    "attempts": [
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     },
+     {
+      "text": "",
+      "valid": false,
+      "size": 0
+     }
+    ]
+   }
+  ]
+ }
+}

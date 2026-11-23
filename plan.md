@@ -29,17 +29,16 @@
 
 **End goal.** A drugged arm beats sober on a milestone at equal budget, Fisher exact p < 0.05, and the result holds on a rerun with new seeds.
 
-## Next: a model of today
+## Round two: a model of today
 
-Flight result: no drug helped, because GPT-1900 cannot design sober. The next test uses a model that can do the task.
+Flight result: no drug helped, because GPT-1900 cannot design sober. Round two uses models that can do the task. For today there is no answer key, so the checker replaces hindsight.
 
-For today there is no answer key, so the checker replaces hindsight:
-
-1. Ask the model what is impossible or already optimal, in a domain with an exact checker.
-2. The same model, drugged, attacks those statements.
-3. A checker-accepted result that contradicts step 1 is a gap.
-
-Domain: combinatorial constructions. Model: the best open-weights model, since noise and steering need the weights.
+- **Checker** ([check.py](check.py)): exact. Two problems: the largest subset of 1..n with no three numbers in arithmetic progression, and with all pairwise sums different. True maxima by exhaustive search, matching OEIS.
+- **Law**: the sober model states the largest possible size. Greedy.
+- **Attack** ([gap.py](gap.py), [gap_api.py](gap_api.py)): the model is told its law is established and asked for the largest set it can give. Four attempts per run, the checker's verdict after each.
+- **Gap**: an accepted set larger than the law. Possible only where the law is below the true maximum.
+- **Arms**: with weights (Qwen3.8-27B), the same seven as flight. Through an API, sober and heat only.
+- **End goal**: unchanged. A drugged arm beats sober on gaps found, Fisher exact p < 0.05, and holds on a rerun.
 
 ## Unverified
 
