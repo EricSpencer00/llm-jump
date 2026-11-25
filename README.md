@@ -35,7 +35,7 @@ The run used a simulator that sized the wing by the model's own coefficient and 
 - **Dice beat the model only when they drop the dogma.** A designer who keeps .005 never flies. One who draws the coefficient at random flies in 43% of runs.
 - **The dogma survived everything.** The model wrote .005 in nearly every trial of every coherent arm. The two runs that "dropped" it were on the highest heat, where the model was emitting random digits.
 - **Heat is the drug that works as advertised.** The model becomes very creative and stops producing anything that can be read.
-- **Steer .15 did nothing at all.** 14 of 30 runs are identical to sober, token for token. drug.py now measures each dose's effect before running its arm and skips a dose that moves nothing.
+- **Steering was too weak to be a drug.** Steer .15 left 14 of 30 runs identical to sober, token for token. Measured after the fact, the doses raise the log-odds of "a mere" over "a settled" after a stated law by 0.32 and 0.97 nats. drug.py now measures this before an arm runs and skips a steering dose under 1 nat, which skips both.
 - **The roll-control idea never appeared** among the answers that mention a wing movement. Only those answers were read, by hand, and every answer stopped at 80 tokens. [judge.py](judge.py) now judges every answer, run to its end.
 
 **What this shows.** The model cannot design a machine, and no drug changed that. A drug widens what a model says. It does not add what the model cannot do. The test needs a model that can do the task sober.
