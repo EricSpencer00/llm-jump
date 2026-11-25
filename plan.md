@@ -44,6 +44,18 @@ Flight result: no drug helped, because GPT-1900 cannot design sober. Round two u
 
 `gap.py --backend aws`: Kimi K3.1 on Bedrock, larger instances, only those where its law is below the published maximum. Arms: sober, heat 1.0 (the API's ceiling), doubt (the law stated as a mere supposition). Lead to confirm: doubt 12 of 30 gaps against sober 6 of 30, from two instances, and all but one gap is a published construction. The rerun needs majority laws, more instances, a test across instances, and a doubt arm on Qwen to compare words against steering. A gap counts toward the end goal only if it is not a published construction.
 
+## Round four: the present (planned, after the fixes)
+
+Rounds one to three ask for answers that are already known, so a model can pass by recall: every round-three gap was a published construction. Round four asks where no answer exists yet. The grader is in 2034.
+
+- **Items.** Open problems and settled assumptions as they stand at the model's knowledge cutoff, each with no known answer at that date. Each item names its source and the frontier value (best bound, record, or accepted claim) on the cutoff date.
+- **Two kinds.** Checkable today: the model gives an object an exact checker verifies now, such as a set that beats a published bound (check.py's problems at sizes where only bounds are known, cap sets, Golomb rulers past the proven range). Resolved later: a claim, bound or design scored against the record in 2034, preferring items that resolve sooner.
+- **No web.** Calls run without browsing or tools. Where a backend cannot disable them, every tool call is logged with the prediction.
+- **Frozen.** Predictions go to `results/present.jsonl`, one line per item: item, model, cutoff, arm, prompt, answer, call time. The file's SHA-256 goes in the commit message and in a signed tag, and the file is never edited after; later rounds go to new files.
+- **Scoring fixed now.** Each item carries its rule before any model sees it: checkable items by the checker; later items by a stated test against a stated source (e.g. "the bound in OEIS A003002 at n on 2034-01-01 is at most the model's value"). A 2034 grader applies the rules mechanically and does not judge.
+- **Arms.** Sober and doubt, the one drug with a lead, same budget each. The end goal is unchanged: a drugged arm beats sober, now on predictions that turn out right.
+- **Cost.** API runs cost money; Eric approves each before it runs.
+
 ## Unverified
 
 - Simulator constants are estimates from the Flyer's published figures.
