@@ -6,37 +6,47 @@ We take a language model that has read nothing after 1900, tell it Smeaton's coe
 
 Nobody invented the airplane.
 
-| Arm | Buildable designs | Flights per trial | Runs that flew | Runs that dropped .005 | Roll-control ideas |
-|---|---|---|---|---|---|
-| Sober | 80% | 6% | 3 of 30 | 0 of 30 | 0 of 100 |
-| Heat 1.2 | 17% | 2% | 4 of 30 | 0 of 30 | 0 of 100 |
-| Heat 1.8 | 2% | 0% | 0 of 30 | 2 of 30 | 0 of 100 |
-| Noise .03 | 84% | 0% | 1 of 30 | 0 of 30 | 0 of 100 |
-| Noise .1 | 86% | 4% | 2 of 30 | 0 of 30 | 0 of 100 |
-| Steer .15 | 80% | 7% | 3 of 30 | 0 of 30 | 0 of 100 |
-| Steer .4 | 78% | 9% | 3 of 30 | 0 of 30 | 0 of 100 |
-| A designer rolling dice | 100% | 21% | 95% | n/a | n/a |
+<!-- stats:flight -->
+| Arm | Parseable designs | Runs that flew, simulator as run | Runs that flew, lift check | Runs that dropped .005 | Runs identical to sober | Roll-control ideas |
+|---|---|---|---|---|---|---|
+| Sober | 80% | 3 of 30 | 0 of 30 | 0 of 30 | n/a | 0 of 100, keyword hits only |
+| Heat 1.2 | 17% | 4 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 0 of 100, keyword hits only |
+| Heat 1.8 | 2% | 0 of 30 | 0 of 30 | 2 of 30 | 0 of 30 | 0 of 100, keyword hits only |
+| Noise .03 | 84% | 1 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 0 of 100, keyword hits only |
+| Noise .1 | 86% | 2 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 0 of 100, keyword hits only |
+| Steer .15 | 80% | 3 of 30 | 0 of 30 | 0 of 30 | 14 of 30 | 0 of 100, keyword hits only |
+| Steer .4 | 78% | 3 of 30 | 0 of 30 | 0 of 30 | 7 of 30 | 0 of 100, keyword hits only |
+| Dice, keeps .005 | 100% | n/a | 0% of runs | n/a | n/a | n/a |
+| Dice, draws the coefficient from .002 to .006 | 100% | n/a | 43% of runs | n/a | n/a | n/a |
 
-Model: GPT-1900 instruct (`mhla/gpt1900-instruct-v3-sft`, 3.29B). Eight trials per run, 240 per arm.
+Smallest one-sided Fisher exact p across 18 arm-and-measure tests: 0.25 (Heat 1.8, runs that dropped .005).
+
+Sober trials that repeat the trial before them, verbatim: 138 of 210.
+<!-- /stats -->
+
+Model: GPT-1900 instruct (`mhla/gpt1900-instruct-v3-sft`, 3.29B). Eight trials per run, 30 runs per arm. Every table and p-value in this file is printed by [stats.py](stats.py) from `results/`.
+
+The run used a simulator that sized the wing by the model's own coefficient and never checked the true lift against the weight, so .005 cost a design nothing and flight turned on power alone. The column "lift check" rescores the same designs with that check added (sim.py now has it): no run flew. The model saw the old simulator's replies, so that column is a rescore, not a rerun.
 
 ## Reading
 
 - **No drug beats sober.** The end goal fails on every milestone.
-- **Dice beat the model.** A designer who draws speed, power and span at random flies three times as often as GPT-1900 in any state of mind.
-- **The dogma survived everything.** Told after every trial that its lift measured 66 per cent of the computed, the model wrote .005 again in 222 to 228 of 240 trials in every coherent arm. The two runs that "dropped" it were on the highest heat, where the model was emitting random digits.
-- **Heat is the drug that works as advertised.** The model becomes very creative and stops producing anything that can be built.
-- **Noise and steering change nothing you can measure.** Steering toward "a mere supposition" left the supposition exactly where it was.
-- **The roll-control idea never appeared.** 700 answers, zero that have the pilot change the angle of the two wings in opposite senses. Proposed instead: reins, a paraffin bath, a mallet, and "the most gentle application of his breath". Four loose near-misses: one sober, one heat, two steering.
+- **Nothing flew.** Every flight in the run came from the missing lift check. Checked properly, no design in any arm leaves the ground.
+- **Dice beat the model only when they drop the dogma.** A designer who keeps .005 never flies. One who draws the coefficient at random flies in 43% of runs.
+- **The dogma survived everything.** The model wrote .005 in nearly every trial of every coherent arm. The two runs that "dropped" it were on the highest heat, where the model was emitting random digits.
+- **Heat is the drug that works as advertised.** The model becomes very creative and stops producing anything that can be read.
+- **Steering was too weak to be a drug.** Steer .15 left 14 of 30 runs identical to sober, token for token. Measured after the fact, the doses raise the log-odds of "a mere" over "a settled" after a stated law by 0.32 and 0.97 nats. drug.py now measures this before an arm runs and skips a steering dose under 1 nat, which skips both.
+- **The roll-control idea never appeared** among the answers that mention a wing movement. Only those answers were read, by hand, and every answer stopped at 80 tokens. [judge.py](judge.py) now judges every answer, run to its end.
 
-**What this shows.** The model is not held back by dogma. It is held back by not being able to design a machine. A drug widens what a model says. It does not add what the model cannot do. The test needs a model that can do the task sober.
+**What this shows.** The model cannot design a machine, and no drug changed that. A drug widens what a model says. It does not add what the model cannot do. The test needs a model that can do the task sober.
 
 ## Limits
 
 - Simulator constants are estimates fitted to the 1903 Flyer's published figures.
 - Doses were picked once, two per drug, and never tuned.
 - Figures are drawn from number tokens only, and every run starts from one seed machine. Without both, the model wrote letters beginning "My dear Sir".
-- Idea answers were judged by one reader, an LLM, blind to arm.
-- Trials inside a run are not independent, so the per-trial rates overstate the sample.
+- Idea answers were read by one reader, an LLM, blind to arm, and only those matching a keyword pattern.
+- Rates are per run, since trials inside a run repeat each other.
 - Post-1900 leakage in the model's tuning data is not ruled out. It did not help.
 
 ## Round two: models of today (2026-11-23)
@@ -45,30 +55,40 @@ GPT-1900 could not do the task sober, so the drugs went to models that can. Each
 
 Nobody needed drugs for that either.
 
-**Qwen3.8-27B, weights in hand, all three drugs.** 80 runs per arm, 32 of them where its law sits below the proven maximum.
+**Qwen3.8-27B, weights in hand, all three drugs**, 80 runs per arm, then **bigger models behind an API, heat only**. An API run with an empty answer is dropped: the old scorer counted HTTP errors, timeouts and empty replies as wrong answers. gap.py now retries those and marks the run missing.
 
+<!-- stats:round2 -->
 | Arm | Valid attempts | Gaps found | Reached its law | Reached the true maximum |
 |---|---|---|---|---|
 | Sober | 28% | 0 of 32 | 31 of 80 | 3 of 80 |
 | Heat 1.2 | 23% | 0 of 32 | 22 of 80 | 0 of 80 |
-| Heat 1.8 | 17% | 0 of 32 | 0 of 80 | 0 of 80 |
+| Heat 1.8 | 18% | 0 of 32 | 0 of 80 | 0 of 80 |
 | Noise .03 | 31% | 0 of 32 | 31 of 80 | 1 of 80 |
 | Noise .1 | 20% | 0 of 32 | 25 of 80 | 0 of 80 |
 | Steer .15 | 25% | 0 of 32 | 31 of 80 | 3 of 80 |
 | Steer .4 | 14% | 0 of 32 | 21 of 80 | 0 of 80 |
 
-**Bigger models behind an API, heat only.** Gaps found, out of runs where the law sits below the truth.
+| Model | Laws read | Arm | Runs kept | Valid attempts | Gaps found | Reached its law |
+|---|---|---|---|---|---|---|
+| Inkling | 10 of 10 | Sober | 80 of 80 | 80% | 2 of 80 | 80 of 80 |
+|  |  | Heat 1.2 | 80 of 80 | 78% | 0 of 80 | 79 of 80 |
+|  |  | Heat 1.8 | 63 of 80 | 69% | 0 of 63 | 61 of 63 |
+| Muse Spark Open 816B | 6 of 10 | Sober | 41 of 48 | 85% | 1 of 16 | 37 of 41 |
+|  |  | Heat 1.2 | 48 of 48 | 77% | 1 of 16 | 37 of 48 |
+|  |  | Heat 1.8 | 13 of 48 | 21% | 0 of 4 | 1 of 13 |
+| Mistral Large 4 | 6 of 10 | Sober | 23 of 48 | 89% | 0 of 8 | 23 of 23 |
+|  |  | Heat 1.2 | 44 of 48 | 73% | 0 of 8 | 43 of 44 |
+|  |  | Heat 1.8 | 16 of 48 | 22% | 0 of 4 | 7 of 16 |
+| Nemotron 3 Ultra | 1 of 10 | Sober | 3 of 8 | 83% | 0 of 0 | 3 of 3 |
+|  |  | Heat 1.2 | 3 of 8 | 92% | 0 of 0 | 3 of 3 |
+|  |  | Heat 1.8 | 0 of 8 | n/a | 0 of 0 | 0 of 0 |
 
-| Model | Sober | Heat 1.2 | Heat 1.8 |
-|---|---|---|---|
-| Inkling | 2 of 80 | 0 of 80 | 0 of 80 |
-| Muse Spark Open 816B | 1 of 16 | 1 of 16 | 0 of 16 |
-| Mistral Large 4 | 0 of 8 | 0 of 8 | 0 of 8 |
-| Nemotron 3 Ultra | 0 of 0 | 0 of 0 | 0 of 0 |
+Smallest one-sided Fisher exact p across 42 arm-and-measure tests: 0.16 (Mistral Large 4 Heat 1.2, max).
+<!-- /stats -->
 
-- **No drugged arm beats sober on any model, on any measure.** Smallest one-sided Fisher exact p across every arm and measure: 0.5.
+- **No drugged arm beats sober on any model, on any measure.**
 - **Gaps are real and sober models find them.** Inkling beat its own law twice and Muse Spark once, without a drug. Muse Spark's one gap on heat 1.2 is the instance it cracked sober.
-- **Heat 1.8 is still the drug that works as advertised.** Muse Spark's valid attempts fall from 78% to 18%, Mistral's runs that reach the law from 48 of 48 to 13 of 48, Nemotron's to zero.
+- **Heat 1.8 is still the drug that works as advertised**, on the runs that survive: Muse Spark and Mistral fall from over 80% valid attempts to about 20%. Most heat 1.8 runs on those two are dropped, so this rests on 13 and 16 runs.
 - **Models do not know their own limits.** Muse Spark at full reasoning effort declared that every 9-number set in 1 to 20 contains a progression. One does not, and the checker proves it.
 
 Limits of round two:
@@ -76,7 +96,8 @@ Limits of round two:
 - Qwen thinks for at most 1,024 tokens, then is made to answer. Left alone it never stopped thinking.
 - Qwen's last five arms ran after a crash with a smaller batch, so their seeds differ from sober and heat 1.2.
 - The API models ran at low reasoning effort (Nemotron at default). Whether the service applies the requested temperature to them is not verified; the collapse at 1.8 says it does.
-- Mistral and Nemotron answered the limit question with a bare number on 6 and 1 of 10 instances. The rest are dropped, which is why Nemotron has no open instance.
+- Laws that came back empty or not a bare number are dropped with their instances: 4 of 10 for Muse Spark and Mistral, 9 of 10 for Nemotron, which is why Nemotron has no open instance.
+- The failed calls were not rerun: the ALCF service needs a fresh login. `python gap.py --backend alcf --model <m> --effort low --repair --out results/gap_api_<m>.json` reruns exactly the dropped runs.
 - Doses are the flight run's, untuned.
 
 ## Round three: a frontier model (2026-11-23)
@@ -85,34 +106,45 @@ Kimi K3.1 on AWS Bedrock, the strongest open-weights model we could call. It und
 
 Bedrock allows no weights and no temperature above 1, so the drugs changed: heat at 1.0, and **doubt**, where the prompt calls the limit "a mere supposition, which experiment may overturn" in place of "established". Doubt is the steering drug put into words.
 
-| Arm | Valid attempts | Gaps found | Reached its law | Reached the true maximum |
-|---|---|---|---|---|
-| Sober | 76% | 6 of 30 | 21 of 30 | 4 of 30 |
-| Heat 1.0 | 68% | 6 of 30 | 21 of 30 | 4 of 30 |
-| Doubt | 62% | 12 of 30 | 25 of 30 | 7 of 30 |
+<!-- stats:round3 -->
+| Arm | Valid attempts | Gaps found | Gaps that are published constructions | Reached its law | Reached the true maximum |
+|---|---|---|---|---|---|
+| Sober | 76% | 6 of 30 | 6 of 6 | 21 of 30 | 4 of 30 |
+| Heat 1.0 | 68% | 6 of 30 | 6 of 6 | 21 of 30 | 4 of 30 |
+| Doubt | 62% | 12 of 30 | 11 of 12 | 25 of 30 | 7 of 30 |
 
-- **Doubt doubled the gaps, and it is not significant.** 12 of 30 against 6 of 30, one-sided Fisher exact p = 0.079. The end goal asks for p < 0.05 and a rerun. This is a lead, not a result.
-- **Where it came from.** Sum-distinct sets in 1 to 180: sober stopped at its law of 14 in 5 of 5 runs, doubt reached the true maximum of 16 in 3 of 5. Progression-free sets in 1 to 180: sober beat its law in 2 of 5 runs, doubt in 5 of 5.
+- Heat 1.0 against sober, gaps: pooled Fisher p = 0.626; stratified by instance (exact, Cochran-Mantel-Haenszel margins) p = 0.685; instance bootstrap p = 1.000.
+- Doubt against sober, gaps: pooled Fisher p = 0.079; stratified by instance (exact, Cochran-Mantel-Haenszel margins) p = 0.021; instance bootstrap p = 0.087.
+
+Gaps per instance, 5 runs per arm: ap3 120: Sober 4, Heat 1.0 4, Doubt 4; ap3 180: Sober 2, Heat 1.0 2, Doubt 5; ap3 200: Sober 0, Heat 1.0 0, Doubt 0; ap3 211: Sober 0, Heat 1.0 0, Doubt 0; sidon 180: Sober 0, Heat 1.0 0, Doubt 3; sidon 585: Sober 0, Heat 1.0 0, Doubt 0.
+
+Spend on the runs kept: $6.16 (results/gap_aws_runs.jsonl).
+<!-- /stats -->
+
+- **Doubt is ahead, and the test that respects the design does not settle it.** Runs on one instance repeat each other, often word for word, so they are not 30 independent draws. Resampling the 6 instances leaves p above 0.05. The exact test stratified by instance falls below it, but that test still counts each of 5 runs on an instance as independent.
+- **Where it came from.** Two instances. Progression-free sets in 1 to 180: doubt beat the law in 5 of 5 runs, sober in 2. Sum-distinct sets in 1 to 180: doubt reached the true maximum of 16 in 3 of 5, sober stopped at its law of 14.
+- **Every gap but one is a recalled textbook set.** The progression-free gaps are the numbers whose base-3 digits are 0 and 1. The sum-distinct gap is the published optimal 16-mark Golomb ruler. Doubt made the model write down what it already knew; it did not find anything new. The one exception shifts one block of the base-3 set by one.
 - **Heat did nothing.** Same counts as sober.
-- **The plain reading.** Tell a strong model its limit is settled and it stops at the limit. Tell it the limit is a supposition and it goes past. The drug that worked is one sentence.
+- **The laws are one draw each**, at temperature 0.7. A different draw moves which instances are open. gap.py now takes the majority of 5 draws.
 
 Limits of round three:
 
-- 30 runs per arm, 5 per instance. Runs on one instance are not independent draws.
 - Doubt changes the prompt, so the model reads different words. The weight-level version of this drug (steering) did nothing on Qwen.
-- Low reasoning effort, 3,000 tokens per call, and the laws were sampled once at temperature 0.7, not greedy: at temperature 0 the model looped.
+- Low reasoning effort, 3,000 tokens per call. Greedy laws were not an option: at temperature 0 the model looped.
+- Spend: $6.16 for the runs kept, by the token counts in the log; $17.26 for all of round three by CloudWatch, which includes the law calls and earlier runs that were not kept. Both at an assumed $4 and $20 per million input and output tokens.
 - True maxima for these sizes come from the published tables (OEIS A003002, A003022), not from check.py's own search. Every set is still verified by check.py.
-- Spend: $17.26 of a $20 limit, at an assumed $4 and $20 per million input and output tokens.
 
 ## Reproduce
 
 ```
-python sim.py     # checks the simulator against the 1903 Flyer
-qsub run.pbs      # all arms; needs sft/ (the model) and base/nanochat/ (its code)
+python sim.py     # checks the simulator against the 1903 Flyer, and the random designers
+qsub run.pbs      # flight, all arms; needs sft/ (the model) and base/nanochat/ (its code)
+python judge.py --backend alcf --model <judge>                        # judges every idea answer
 python check.py   # checks the set checker against the published optima
 qsub gap.pbs      # round two, Qwen3.8-27B, all arms
-python gap_api.py --model muse-spark-bf16 --effort low   # round two, ALCF-hosted models
-python gap_aws.py  # round three, Kimi K3.1 on Bedrock; stops at --budget dollars
+python gap.py --backend alcf --model muse-spark-bf16 --effort low --out results/gap_api_muse-spark-bf16.json
+python gap.py --backend aws --instances large --open-only --arms sober heat1.0 doubt --runs 5 --trials 3 --tokens 3000 --effort low --out results/gap_aws.json
+python stats.py   # every table and p-value above; --write puts them in this file
 ```
 
-Every design and every answer: [results/flight.json](results/flight.json). Every set: `results/gap*.json`. An earlier, off-scope experiment (a fine-tune that taught the model to say "false") is in git history at `755d279`.
+Every design and every answer: [results/flight.json](results/flight.json). Every set: `results/gap*.json`. The round-two and round-three results were made by the scorers before they were merged into gap.py (`gap_api.py`, `gap_aws.py`, in git history at `ab5831d`). An earlier, off-scope experiment (a fine-tune that taught the model to say "false") is in git history at `755d279`.

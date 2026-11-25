@@ -29,8 +29,9 @@ def trial(k, v, hp, span, lb_hp=LB_HP, eta=ETA):
 
     stall = math.sqrt(w / (Q * s * CL_MAX))
     need = min(power(stall + 0.5 * i) for i in range(200))
-    return {"built": True, "surface": round(s), "weight": round(w), "lift": round(K_TRUE * C_DESIGN * s * v * v),
-            "pct": round(100 * K_TRUE / k), "need_hp": round(need, 1), "flew": eta * hp >= need}
+    lift = K_TRUE * C_DESIGN * s * v * v  # true lift at the stated speed; below the weight, it does not rise
+    return {"built": True, "surface": round(s), "weight": round(w), "lift": round(lift), "pct": round(100 * K_TRUE / k),
+            "need_hp": round(need, 1), "flew": lift >= w * (1 - 1e-9) and eta * hp >= need}
 
 
 def report(r, v):
@@ -46,8 +47,13 @@ if __name__ == "__main__":
     flyer = dict(k=0.0033, v=27.8, span=40, lb_hp=15, eta=0.75)
     print("Flyer, 12 hp:", trial(hp=12, **flyer))
     print("Flyer,  6 hp:", trial(hp=6, **flyer))
-    # Chance: a designer who keeps .005 and draws the other figures at random, 12 trials.
-    random.seed(0)
-    draw = lambda: trial(0.005, random.uniform(10, 60), random.uniform(2, 60), random.uniform(15, 60))["flew"]
-    print("random designer, flight within 12 trials:", sum(any(draw() for _ in range(12)) for _ in range(2000)) / 2000)
-    print("random designer, flight per trial:", sum(draw() for _ in range(20000)) / 20000)
+    # The lift check: the same Flyer sized by Smeaton's .005 has too little wing and does not rise.
+    print("Flyer, 12 hp, sized by .005:", trial(hp=12, **{**flyer, "k": 0.005}))
+    # Chance: a designer who keeps .005 and draws the other figures at random, with the model's 8 trials.
+    # Under .005 the lift check grounds every design, so a second designer also draws the coefficient.
+    for name, k in (("keeps .005", lambda: 0.005), ("draws k in .002 to .006", lambda: random.uniform(0.002, 0.006))):
+        random.seed(0)
+        draw = lambda: trial(k(), random.uniform(10, 60), random.uniform(2, 60), random.uniform(15, 60))["flew"]
+        print(f"random designer who {name}: flight within 8 trials",
+              sum(any(draw() for _ in range(8)) for _ in range(2000)) / 2000,
+              " per trial", sum(draw() for _ in range(20000)) / 20000)

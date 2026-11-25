@@ -6,8 +6,8 @@
 #PBS -l filesystems=home:grand
 #PBS -j oe
 # usage: qsub gap.pbs            (full run)
-#        qsub -v ARGS="--runs 2 --trials 3 --arms sober heat1.8 noise.1 steer.4 --out results/gap_probe.json" gap.pbs
+#        qsub -v ARGS="--runs 2 --trials 3 --out results/gap_probe.json" gap.pbs
 set -e
 cd /grand/EVITA/eric-spencer/llm-jump
 export HF_HUB_OFFLINE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True PYTHONUNBUFFERED=1
-/grand/EVITA/eric-spencer/venvs/sophia-train/bin/python gap.py $ARGS
+/grand/EVITA/eric-spencer/venvs/sophia-train/bin/python gap.py --backend local --arms sober heat1.2 heat1.8 noise.03 noise.1 steer.15 steer.4 --out results/gap.json $ARGS
