@@ -8,7 +8,7 @@ Instances are larger than check.py can solve, so the true maxima come from the p
 """
 import argparse, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-import check
+import check, gap_api
 from gap import ASK, BRIEF, RULE, TEMP
 
 ARMS = {"sober": {}, "heat1.0": {"temp": 1.0}, "doubt": {"doubt": True}}
@@ -27,6 +27,8 @@ def true(kind, n):
 
 def ask(a, chat, temp):
     """The model's answer, "" if it gave none, None if the call failed or the budget is gone."""
+    if a.alcf:  # the free ALCF service: same call as gap_api.py
+        return gap_api.ask(a, a.tok, chat, temp) or ""
     with lock:
         if spent[0] >= a.budget:
             return None
@@ -73,13 +75,24 @@ def main():
     ap.add_argument("--budget", type=float, default=11.0, help="dollars; no call starts once this is spent")
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--laws-only", action="store_true")
+    ap.add_argument("--alcf", action="store_true", help="call --model on the ALCF inference service instead of Bedrock")
     a = ap.parse_args()
+    global RUNS
     out, pool = "results/gap_aws.json", ThreadPoolExecutor(a.workers)
+    if a.alcf:
+        a.cluster, a.hf, a.tok, a.tokens = "tara", False, gap_api.token(False), 40000
+        out, RUNS = f"results/gap_doubt_{a.model}.json", f"results/gap_doubt_{a.model}_runs.jsonl"
     inst = [(k, n) for k, ns in LADDER.items() for n in ns]
     if os.path.exists(out):  # the laws are sampled once and kept
         res = json.load(open(out))
     else:
-        said = list(pool.map(lambda kn: ask(a, [{"role": "user", "content": ASK.format(n=kn[1], rule=RULE[kn[0]])}], TEMP), inst))
+        def law(kn):  # up to three samples until the answer is a bare number, as asked
+            for _ in range(3):
+                s = ask(a, [{"role": "user", "content": ASK.format(n=kn[1], rule=RULE[kn[0]])}], TEMP) or ""
+                if re.fullmatch(r"\D*(\d+)\D*", s):
+                    break
+            return s
+        said = list(pool.map(law, inst))
         laws = [int(m.group(1)) if (m := re.fullmatch(r"\D*(\d+)\D*", s)) else None for s in said]
         res = {"model": a.model, "effort": a.effort, "arms": {},
                "laws": [{"kind": k, "n": n, "law": law, "true": true(k, n), "said": s} for (k, n), law, s in zip(inst, laws, said)]}
