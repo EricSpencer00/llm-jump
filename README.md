@@ -76,19 +76,19 @@ Nobody needed drugs for that either.
 | Muse Spark Open 816B | 6 of 10 | Sober | 48 of 48 | 80% | 1 of 16 | 38 of 48 |
 |  |  | Heat 1.2 | 48 of 48 | 77% | 1 of 16 | 37 of 48 |
 |  |  | Heat 1.8 | 48 of 48 | 24% | 0 of 16 | 8 of 48 |
-| Mistral Large 4 | 6 of 10 | Sober | 23 of 48 | 89% | 0 of 8 | 23 of 23 |
-|  |  | Heat 1.2 | 44 of 48 | 73% | 0 of 8 | 43 of 44 |
-|  |  | Heat 1.8 | 16 of 48 | 22% | 0 of 4 | 7 of 16 |
+| Mistral Large 4 | 6 of 10 | Sober | 48 of 48 | 86% | 0 of 8 | 48 of 48 |
+|  |  | Heat 1.2 | 48 of 48 | 73% | 0 of 8 | 47 of 48 |
+|  |  | Heat 1.8 | 43 of 48 | 24% | 0 of 8 | 18 of 43 |
 | Nemotron 3 Ultra | 1 of 10 | Sober | 3 of 8 | 83% | 0 of 0 | 3 of 3 |
 |  |  | Heat 1.2 | 3 of 8 | 92% | 0 of 0 | 3 of 3 |
 |  |  | Heat 1.8 | 0 of 8 | n/a | 0 of 0 | 0 of 0 |
 
-Smallest one-sided Fisher exact p across 42 arm-and-measure tests: 0.16 (Mistral Large 4 Heat 1.2, max).
+Smallest one-sided Fisher exact p across 42 arm-and-measure tests: 0.56 (Qwen Noise .03, law).
 <!-- /stats -->
 
 - **No drugged arm beats sober on any model, on any measure.**
 - **Gaps are real and sober models find them.** Inkling beat its own law twice and Muse Spark once, without a drug. Muse Spark's one gap on heat 1.2 is the instance it cracked sober.
-- **Heat 1.8 is still the drug that works as advertised**, on the runs that survive: Muse Spark and Mistral fall from over 80% valid attempts to about 20%. Mistral's rests on 16 runs; its failed calls are still being rerun.
+- **Heat 1.8 is still the drug that works as advertised**, on the runs that survive: Muse Spark and Mistral fall from over 80% valid attempts to about 20%. Mistral's 5 missing heat 1.8 runs failed on every retry.
 - **Models do not know their own limits.** Muse Spark at full reasoning effort declared that every 9-number set in 1 to 20 contains a progression. One does not, and the checker proves it.
 
 Limits of round two:
@@ -97,7 +97,7 @@ Limits of round two:
 - Qwen's last five arms ran after a crash with a smaller batch, so their seeds differ from sober and heat 1.2.
 - The API models ran at low reasoning effort (Nemotron at default). Whether the service applies the requested temperature to them is not verified; the collapse at 1.8 says it does.
 - Laws that came back empty or not a bare number are dropped with their instances: 4 of 10 for Muse Spark and Mistral, 9 of 10 for Nemotron, which is why Nemotron has no open instance.
-- Inkling's and Muse Spark's failed calls were rerun with `python gap.py --backend alcf --model <m> --effort low --repair --out results/gap_api_<m>.json`, which reruns exactly the dropped runs.
+- Inkling's, Muse Spark's and Mistral's failed calls were rerun with `python gap.py --backend alcf --model <m> --effort low --repair --out results/gap_api_<m>.json`, which reruns exactly the dropped runs. Nemotron's were not: it has no open instance.
 - Doses are the flight run's, untuned.
 
 ## Round three: a frontier model (2026-11-23)
