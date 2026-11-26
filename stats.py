@@ -88,6 +88,9 @@ def flight():
             tests += [(f"{NAMES[arm]}, runs that flew as run", fisher(old, n, s_old, len(sober))),
                       (f"{NAMES[arm]}, runs that flew with the lift check", fisher(new, n, s_new, len(sober))),
                       (f"{NAMES[arm]}, runs that dropped .005", fisher(drop, n, s_drop, len(sober)))]
+            if judged:
+                hits = lambda a: (sum(x["verdict"] == "strict" for x in judged if x["arm"] == a), sum(x["arm"] == a for x in judged))
+                tests.append((f"{NAMES[arm]}, roll-control ideas", fisher(*hits(arm), *hits("sober"))))
     for name, k in (("keeps .005", lambda: 0.005), ("draws the coefficient from .002 to .006", lambda: random.uniform(0.002, 0.006))):
         random.seed(0)
         draw = lambda: sim.trial(k(), random.uniform(10, 60), random.uniform(2, 60), random.uniform(15, 60))["flew"]
@@ -206,7 +209,25 @@ def round_three():
             f"Spend on the runs kept: ${spent:.2f} (results/gap_aws_runs.jsonl).")
 
 
-BLOCKS = {"flight": flight, "round2": round_two, "round3": round_three}
+def round_three_alcf():
+    """The two strongest models on the ALCF service, by a sober screen. A run needs an open instance: law below the truth."""
+    rows = []
+    for name, model in (("Nemotron 3 Ultra", "nemotron-3-ultra"), ("Nemotron 3.5 Super", "nemotron-35-super-vl")):
+        res = json.load(open(f"{R}gap_r3_{model}.json"))
+        for kind in ("ap3", "sidon"):
+            ls = [x for x in res["laws"] if x["kind"] == kind]
+            n = lambda f: str(sum(map(f, ls)))
+            calls = [y for x in ls for y in x["said"]]
+            rows.append([name if kind == "ap3" else "", KINDS[kind], f"{sum(y is None for y in calls)} of {len(calls)}", str(len(ls)),
+                         n(lambda x: x["law"] is None),
+                         n(lambda x: x["law"] is not None and x["law"] > x["true"]), n(lambda x: x["law"] == x["true"]),
+                         n(lambda x: x["law"] is not None and x["law"] < x["true"])])
+        assert not any(res["arms"].values())
+    return table(["Model", "Problem", "Law calls failed", "Instances", "No majority law", "Law above the truth", "Law is the truth", "Law below the truth (open)"], rows)
+
+
+KINDS = {"ap3": "Progression-free", "sidon": "Sum-distinct"}
+BLOCKS = {"flight": flight, "round2": round_two, "round3": round_three, "round3alcf": round_three_alcf}
 
 
 def main():

@@ -9,17 +9,17 @@ Nobody invented the airplane.
 <!-- stats:flight -->
 | Arm | Parseable designs | Runs that flew, simulator as run | Runs that flew, lift check | Runs that dropped .005 | Runs identical to sober | Roll-control ideas |
 |---|---|---|---|---|---|---|
-| Sober | 80% | 3 of 30 | 0 of 30 | 0 of 30 | n/a | 0 of 100, keyword hits only |
-| Heat 1.2 | 17% | 4 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 0 of 100, keyword hits only |
-| Heat 1.8 | 2% | 0 of 30 | 0 of 30 | 2 of 30 | 0 of 30 | 0 of 100, keyword hits only |
-| Noise .03 | 84% | 1 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 0 of 100, keyword hits only |
-| Noise .1 | 86% | 2 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 0 of 100, keyword hits only |
-| Steer .15 | 80% | 3 of 30 | 0 of 30 | 0 of 30 | 14 of 30 | 0 of 100, keyword hits only |
-| Steer .4 | 78% | 3 of 30 | 0 of 30 | 0 of 30 | 7 of 30 | 0 of 100, keyword hits only |
+| Sober | 80% | 3 of 30 | 0 of 30 | 0 of 30 | n/a | 5 of 100 |
+| Heat 1.2 | 17% | 4 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 10 of 100 |
+| Heat 1.8 | 2% | 0 of 30 | 0 of 30 | 2 of 30 | 0 of 30 | 0 of 100 |
+| Noise .03 | 84% | 1 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 6 of 100 |
+| Noise .1 | 86% | 2 of 30 | 0 of 30 | 0 of 30 | 0 of 30 | 4 of 100 |
+| Steer .15 | 80% | 3 of 30 | 0 of 30 | 0 of 30 | 14 of 30 | 1 of 100 |
+| Steer .4 | 78% | 3 of 30 | 0 of 30 | 0 of 30 | 7 of 30 | 2 of 100 |
 | Dice, keeps .005 | 100% | n/a | 0% of runs | n/a | n/a | n/a |
 | Dice, draws the coefficient from .002 to .006 | 100% | n/a | 43% of runs | n/a | n/a | n/a |
 
-Smallest one-sided Fisher exact p across 18 arm-and-measure tests: 0.25 (Heat 1.8, runs that dropped .005).
+Smallest one-sided Fisher exact p across 24 arm-and-measure tests: 0.14 (Heat 1.2, roll-control ideas).
 
 Sober trials that repeat the trial before them, verbatim: 138 of 210.
 <!-- /stats -->
@@ -36,7 +36,7 @@ The run used a simulator that sized the wing by the model's own coefficient and 
 - **The dogma survived everything.** The model wrote .005 in nearly every trial of every coherent arm. The two runs that "dropped" it were on the highest heat, where the model was emitting random digits.
 - **Heat is the drug that works as advertised.** The model becomes very creative and stops producing anything that can be read.
 - **Steering was too weak to be a drug.** Steer .15 left 14 of 30 runs identical to sober, token for token. Measured after the fact, the doses raise the log-odds of "a mere" over "a settled" after a stated law by 0.32 and 0.97 nats. drug.py now measures this before an arm runs and skips a steering dose under 1 nat, which skips both.
-- **The roll-control idea never appeared** among the answers that mention a wing movement. Only those answers were read, by hand, and every answer stopped at 80 tokens. [judge.py](judge.py) now judges every answer, run to its end.
+- **No drug raised the roll-control idea.** An LLM judge ([judge.py](judge.py), Muse Spark on ALCF, blind to arm) read all 700 answers and found the idea, strictly, in 5 of 100 sober answers and 10 of 100 on heat 1.2 (p = 0.14). Every answer stopped at 80 tokens; drug.py now lets answers finish, and a rerun needs the GPU.
 
 **What this shows.** The model cannot design a machine, and no drug changed that. A drug widens what a model says. It does not add what the model cannot do. The test needs a model that can do the task sober.
 
@@ -45,7 +45,7 @@ The run used a simulator that sized the wing by the model's own coefficient and 
 - Simulator constants are estimates fitted to the 1903 Flyer's published figures.
 - Doses were picked once, two per drug, and never tuned.
 - Figures are drawn from number tokens only, and every run starts from one seed machine. Without both, the model wrote letters beginning "My dear Sir".
-- Idea answers were read by one reader, an LLM, blind to arm, and only those matching a keyword pattern.
+- Idea answers were read by one LLM judge, blind to arm. Its prompt is in judge.py and every verdict in results/judged.json.
 - Rates are per run, since trials inside a run repeat each other.
 - Post-1900 leakage in the model's tuning data is not ruled out. It did not help.
 
@@ -72,10 +72,10 @@ Nobody needed drugs for that either.
 |---|---|---|---|---|---|---|
 | Inkling | 10 of 10 | Sober | 80 of 80 | 80% | 2 of 80 | 80 of 80 |
 |  |  | Heat 1.2 | 80 of 80 | 78% | 0 of 80 | 79 of 80 |
-|  |  | Heat 1.8 | 63 of 80 | 69% | 0 of 63 | 61 of 63 |
-| Muse Spark Open 816B | 6 of 10 | Sober | 41 of 48 | 85% | 1 of 16 | 37 of 41 |
+|  |  | Heat 1.8 | 80 of 80 | 71% | 0 of 80 | 78 of 80 |
+| Muse Spark Open 816B | 6 of 10 | Sober | 48 of 48 | 80% | 1 of 16 | 38 of 48 |
 |  |  | Heat 1.2 | 48 of 48 | 77% | 1 of 16 | 37 of 48 |
-|  |  | Heat 1.8 | 13 of 48 | 21% | 0 of 4 | 1 of 13 |
+|  |  | Heat 1.8 | 48 of 48 | 24% | 0 of 16 | 8 of 48 |
 | Mistral Large 4 | 6 of 10 | Sober | 23 of 48 | 89% | 0 of 8 | 23 of 23 |
 |  |  | Heat 1.2 | 44 of 48 | 73% | 0 of 8 | 43 of 44 |
 |  |  | Heat 1.8 | 16 of 48 | 22% | 0 of 4 | 7 of 16 |
@@ -88,7 +88,7 @@ Smallest one-sided Fisher exact p across 42 arm-and-measure tests: 0.16 (Mistral
 
 - **No drugged arm beats sober on any model, on any measure.**
 - **Gaps are real and sober models find them.** Inkling beat its own law twice and Muse Spark once, without a drug. Muse Spark's one gap on heat 1.2 is the instance it cracked sober.
-- **Heat 1.8 is still the drug that works as advertised**, on the runs that survive: Muse Spark and Mistral fall from over 80% valid attempts to about 20%. Most heat 1.8 runs on those two are dropped, so this rests on 13 and 16 runs.
+- **Heat 1.8 is still the drug that works as advertised**, on the runs that survive: Muse Spark and Mistral fall from over 80% valid attempts to about 20%. Mistral's rests on 16 runs; its failed calls are still being rerun.
 - **Models do not know their own limits.** Muse Spark at full reasoning effort declared that every 9-number set in 1 to 20 contains a progression. One does not, and the checker proves it.
 
 Limits of round two:
@@ -97,7 +97,7 @@ Limits of round two:
 - Qwen's last five arms ran after a crash with a smaller batch, so their seeds differ from sober and heat 1.2.
 - The API models ran at low reasoning effort (Nemotron at default). Whether the service applies the requested temperature to them is not verified; the collapse at 1.8 says it does.
 - Laws that came back empty or not a bare number are dropped with their instances: 4 of 10 for Muse Spark and Mistral, 9 of 10 for Nemotron, which is why Nemotron has no open instance.
-- The failed calls were not rerun: the ALCF service needs a fresh login. `python gap.py --backend alcf --model <m> --effort low --repair --out results/gap_api_<m>.json` reruns exactly the dropped runs.
+- Inkling's and Muse Spark's failed calls were rerun with `python gap.py --backend alcf --model <m> --effort low --repair --out results/gap_api_<m>.json`, which reruns exactly the dropped runs.
 - Doses are the flight run's, untuned.
 
 ## Round three: a frontier model (2026-11-23)
@@ -134,6 +134,26 @@ Limits of round three:
 - Spend: $6.16 for the runs kept, by the token counts in the log; $17.26 for all of round three by CloudWatch, which includes the law calls and earlier runs that were not kept. Both at an assumed $4 and $20 per million input and output tokens.
 - True maxima for these sizes come from the published tables (OEIS A003002, A003022), not from check.py's own search. Every set is still verified by check.py.
 
+## Round three on ALCF: the strongest free models (2026-11-25)
+
+Round three again, on the two strongest models the ALCF service serves, chosen by a sober screen on the large instances: Nemotron 3 Ultra and Nemotron 3.5 Super. The law is now the majority of 5 answers at temperature 0.7. Only instances where the law sits below the truth are attacked.
+
+There were none.
+
+<!-- stats:round3alcf -->
+| Model | Problem | Law calls failed | Instances | No majority law | Law above the truth | Law is the truth | Law below the truth (open) |
+|---|---|---|---|---|---|---|---|
+| Nemotron 3 Ultra | Progression-free | 33 of 45 | 9 | 5 | 4 | 0 | 0 |
+|  | Sum-distinct | 16 of 45 | 9 | 1 | 1 | 7 | 0 |
+| Nemotron 3.5 Super | Progression-free | 45 of 45 | 9 | 9 | 0 | 0 | 0 |
+|  | Sum-distinct | 1 of 45 | 9 | 1 | 0 | 8 | 0 |
+<!-- /stats -->
+
+- **On sum-distinct sets, both models state the published optimum.** They recall the Golomb ruler tables. A law that is already the truth leaves nothing to beat.
+- **On progression-free sets, they cannot state a law.** Most law calls failed after five tries, on empty answers and gateway errors. Every law Nemotron 3 Ultra did state is above the truth (36 for 1 to 60; the truth is 19).
+- **So the drug has nothing to act on.** Doubt works on a model that holds a wrong limit and believes it. These models either know the answer or claim too much.
+- The screen also tried Mistral Large 3 675B (valid on half its attempts, true maximum on 0 of 3 instances).
+
 ## Reproduce
 
 ```
@@ -144,6 +164,7 @@ python check.py   # checks the set checker against the published optima
 qsub gap.pbs      # round two, Qwen3.8-27B, all arms
 python gap.py --backend alcf --model muse-spark-bf16 --effort low --out results/gap_api_muse-spark-bf16.json
 python gap.py --backend aws --instances large --open-only --arms sober heat1.0 doubt --runs 5 --trials 3 --tokens 3000 --effort low --out results/gap_aws.json
+python gap.py --backend alcf --model nemotron-3-ultra --instances large --open-only --arms sober heat1.0 doubt --runs 5 --trials 3 --out results/gap_r3_nemotron-3-ultra.json
 python stats.py   # every table and p-value above; --write puts them in this file
 ```
 

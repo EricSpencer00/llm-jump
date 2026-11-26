@@ -1,0 +1,286 @@
+{
+ "model": "nemotron-35-super-vl",
+ "backend": "alcf",
+ "effort": null,
+ "arms": {
+  "sober": [],
+  "heat1.0": [],
+  "doubt": []
+ },
+ "laws": [
+  {
+   "kind": "ap3",
+   "n": 60,
+   "law": null,
+   "true": 19,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 80,
+   "law": null,
+   "true": 22,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 100,
+   "law": null,
+   "true": 27,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 120,
+   "law": null,
+   "true": 30,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 140,
+   "law": null,
+   "true": 33,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 160,
+   "law": null,
+   "true": 36,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 180,
+   "law": null,
+   "true": 40,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 200,
+   "law": null,
+   "true": 41,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "ap3",
+   "n": 211,
+   "law": null,
+   "true": 43,
+   "said": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "votes": {}
+  },
+  {
+   "kind": "sidon",
+   "n": 60,
+   "law": 10,
+   "true": 10,
+   "said": [
+    "10",
+    "10",
+    "10",
+    "10",
+    "10"
+   ],
+   "votes": {
+    "10": 5
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 90,
+   "law": 12,
+   "true": 12,
+   "said": [
+    "12",
+    "12",
+    "12",
+    "12",
+    "12"
+   ],
+   "votes": {
+    "12": 5
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 130,
+   "law": 14,
+   "true": 14,
+   "said": [
+    "14",
+    "14",
+    "14",
+    "14",
+    "14"
+   ],
+   "votes": {
+    "14": 5
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 180,
+   "law": 16,
+   "true": 16,
+   "said": [
+    "16",
+    null,
+    "16",
+    "16",
+    "16"
+   ],
+   "votes": {
+    "16": 4
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 250,
+   "law": 19,
+   "true": 19,
+   "said": [
+    "19",
+    "19",
+    "19",
+    "19",
+    "19"
+   ],
+   "votes": {
+    "19": 5
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 340,
+   "law": 21,
+   "true": 21,
+   "said": [
+    "21",
+    "21",
+    "21",
+    "21",
+    "21"
+   ],
+   "votes": {
+    "21": 5
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 430,
+   "law": 24,
+   "true": 24,
+   "said": [
+    "23",
+    "23",
+    "24",
+    "24",
+    "24"
+   ],
+   "votes": {
+    "24": 3,
+    "23": 2
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 500,
+   "law": null,
+   "true": 26,
+   "said": [
+    "26",
+    "25",
+    "24",
+    "25",
+    "26"
+   ],
+   "votes": {
+    "26": 2,
+    "25": 2,
+    "24": 1
+   }
+  },
+  {
+   "kind": "sidon",
+   "n": 585,
+   "law": 27,
+   "true": 27,
+   "said": [
+    "28",
+    "28",
+    "27",
+    "27",
+    "27"
+   ],
+   "votes": {
+    "27": 3,
+    "28": 2
+   }
+  }
+ ]
+}
